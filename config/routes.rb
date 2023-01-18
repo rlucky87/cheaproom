@@ -10,4 +10,17 @@ Rails.application.routes.draw do
       resources :bookings, only: [:create]
     end
   end
+  namespace :host do
+    resources :stars, only: [:new, :create]
+
+    resources :bookings, only: [] do
+      member do
+        patch :accept
+        patch :decline
+      end
+    end
+
+  end
+
+  resource :dashboard, only: :show
 end
