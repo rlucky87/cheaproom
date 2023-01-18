@@ -4,4 +4,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root to: "pages#home"
+  resources :hotels, only: [:index, :show] do
+    resources :roomd, only: [:index, :show] do
+      resources :bookings, only: [:create]
+    end
+  end
 end
