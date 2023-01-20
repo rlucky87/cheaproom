@@ -103,9 +103,21 @@ booking2 = Booking.create!(room: room2,
   total_price: 90€,
   status: "accepted" )
 
-booking2 = Booking.create!(room: room10,
+booking3 = Booking.create!(room: room10,
   user: user2,
   arrival_date: "2022-11-25",
   depature_date: "2022-11-26",
   total_price: 58€,
   status: "accepted" )
+
+review1 = Review.create!(user: user1,
+  room: room24,
+  text: "Superbe chambre! l'hotel au top!🤩")
+
+review2 = Review.create!(user: user2,
+  room: room2,
+  text: "Bof, je ne reviendrais pas sur cet hotel. La chambre etait salle!🤮")
+
+review3 = Review.create!(user: user2,
+  room: room10,
+  text: "La chambre c'etait bien mais la reception reste penible😞")
