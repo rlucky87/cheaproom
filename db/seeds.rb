@@ -67,6 +67,26 @@ room24 = Room.create!(type_of_room: 'suite', capacity: '4', price: '150€', hot
 room25 = Room.create!(type_of_room: 'simple', capacity: '1', price: '98€', hotel: hotel9, image: 'room25-hotel9-simple.jpg')
 room26 = Room.create!(type_of_room: 'double', capacity: '2', price: '169€', hotel: hotel9, image: 'room26-hotel9-double.jpg')
 room27 = Room.create!(type_of_room: 'suite', capacity: '4', price: '250€', hotel: hotel9, image: 'room27-hotel9-suite.jpeg')
-room28 = Room.create!(type_of_room: 'simple', capacity: '1', price: '68€', hotel: hotel10, image: 'room13-hotel10-simple.jpg')
-room29 = Room.create!(type_of_room: 'double', capacity: '2', price: '169€', hotel: hotel10, image: 'room14-hotel10-double.jpg')
-room30 = Room.create!(type_of_room: 'suite', capacity: '4', price: '290€', hotel: hotel10, image: 'room15-hotel10-suite.jpg')
+room28 = Room.create!(type_of_room: 'simple', capacity: '1', price: '68€', hotel: hotel10, image: 'room28-hotel10-simple.jpg')
+room29 = Room.create!(type_of_room: 'double', capacity: '2', price: '169€', hotel: hotel10, image: 'room29-hotel10-double.jpg')
+room30 = Room.create!(type_of_room: 'suite', capacity: '4', price: '290€', hotel: hotel10, image: 'room30-hotel10-suite.jpg')
+
+room31 = Room.create!(type_of_room: 'simple', capacity: '1', price: '72€', hotel: hotel11, image: 'room31-hotel11-simple.jpg')
+room32 = Room.create!(type_of_room: 'double', capacity: '2', price: '92€', hotel: hotel11, image: 'room32-hotel11-double.jpg')
+room33 = Room.create!(type_of_room: 'suite', capacity: '4', price: '212€', hotel: hotel11, image: 'room33-hotel11-suite.jpg')
+room34 = Room.create!(type_of_room: 'simple', capacity: '1', price: '73€', hotel: hotel12, image: 'room34-hotel12-simple.jpeg')
+room35 = Room.create!(type_of_room: 'double', capacity: '2', price: '83€', hotel: hotel12, image: 'room35-hotel12-double.jpeg')
+room36 = Room.create!(type_of_room: 'suite', capacity: '4', price: '350€', hotel: hotel12, image: 'room36-hotel12-suite.jpg')
+room37 = Room.create!(type_of_room: 'simple', capacity: '1', price: '54€', hotel: hotel13, image: 'room37-hotel13-simple.jpg')
+room38 = Room.create!(type_of_room: 'double', capacity: '2', price: '64€', hotel: hotel13, image: 'room38-hotel13-double.jpeg')
+room39 = Room.create!(type_of_room: 'suite', capacity: '4', price: '154€', hotel: hotel13, image: 'room39-hotel13-suite.jpg')
+room40 = Room.create!(type_of_room: 'simple', capacity: '1', price: '95€', hotel: hotel14, image: 'room40-hotel14-simple.jpg')
+room41 = Room.create!(type_of_room: 'double', capacity: '2', price: '165€', hotel: hotel14, image: 'room41-hotel14-double.jpg')
+room42 = Room.create!(type_of_room: 'suite', capacity: '4', price: '255€', hotel: hotel14, image: 'room42-hotel14-suite.jpeg')
+room43 = Room.create!(type_of_room: 'simple', capacity: '1', price: '66€', hotel: hotel15, image: 'room43-hotel15-simple.jpg')
+room44 = Room.create!(type_of_room: 'double', capacity: '2', price: '166€', hotel: hotel15, image: 'room44-hotel15-double.jpg')
+room45 = Room.create!(type_of_room: 'suite', capacity: '4', price: '296€', hotel: hotel15, image: 'room45-hotel15-suite.jpg')
+
+puts 'Creating bookings...'
+
+
