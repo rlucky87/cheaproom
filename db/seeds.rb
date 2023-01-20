@@ -89,4 +89,23 @@ room45 = Room.create!(type_of_room: 'suite', capacity: '4', price: '296€', hot
 
 puts 'Creating bookings...'
 
+booking1 = Booking.create!(room: room24,
+  user: user1,
+  arrival_date: "2022-11-22",
+  depature_date: "2022-11-24",
+  total_price: 300€,
+  status: "accepted" )
 
+booking2 = Booking.create!(room: room2,
+  user: user2,
+  arrival_date: "2022-11-23",
+  depature_date: "2022-11-24",
+  total_price: 90€,
+  status: "accepted" )
+
+booking2 = Booking.create!(room: room10,
+  user: user2,
+  arrival_date: "2022-11-25",
+  depature_date: "2022-11-26",
+  total_price: 58€,
+  status: "accepted" )
