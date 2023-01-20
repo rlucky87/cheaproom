@@ -80,3 +80,584 @@ Migrating to AddImageToRoom (20230118144623)
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8083078935556892610)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBooking Load (2.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mHotel Load (5.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mRoom Load (5.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mReview Load (5.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruben@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruben@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:27:17.035608"], ["updated_at", "2023-01-20 21:27:17.035608"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ingrid@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ingrid@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:27:17.287460"], ["updated_at", "2023-01-20 21:27:17.287460"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ariana@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ariana@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:27:17.531513"], ["updated_at", "2023-01-20 21:27:17.531513"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "twix@gmail.fr"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "twix@gmail.fr"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:27:17.775140"], ["updated_at", "2023-01-20 21:27:17.775140"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (1.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "14 Rue du Stade"], ["name", "CREOLIA"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 4], ["created_at", "2023-01-20 21:27:17.784231"], ["updated_at", "2023-01-20 21:27:17.784231"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "91 bis allée des Topazes"], ["name", "BELLEPIERRE"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 3], ["created_at", "2023-01-20 21:27:17.786779"], ["updated_at", "2023-01-20 21:27:17.786779"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "1 Rue Issop Ravate"], ["name", "DINA MORGABINE"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.788198"], ["updated_at", "2023-01-20 21:27:17.788198"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "17 Rue Robert Blache"], ["name", "LE ROBINET D'OR"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.789647"], ["updated_at", "2023-01-20 21:27:17.789647"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "12 Rue Saint-Roch"], ["name", "LOUVRE MONTANA"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 3], ["created_at", "2023-01-20 21:27:17.790983"], ["updated_at", "2023-01-20 21:27:17.790983"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "133 Avenue de Villiers"], ["name", "KORNER ETOILE"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 4], ["created_at", "2023-01-20 21:27:17.792348"], ["updated_at", "2023-01-20 21:27:17.792348"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Rambla Méndez Núñez"], ["name", "MELIA"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.793696"], ["updated_at", "2023-01-20 21:27:17.793696"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Avenida de Niza 38"], ["name", "ALMIRANTE"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.795177"], ["updated_at", "2023-01-20 21:27:17.795177"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "340 W 40th St"], ["name", "TBA TIME SQUARE"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 4], ["created_at", "2023-01-20 21:27:17.796708"], ["updated_at", "2023-01-20 21:27:17.796708"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Carrer Sol Naixent 6"], ["name", "ALBAHIA"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.798134"], ["updated_at", "2023-01-20 21:27:17.798134"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "15 Gold St"], ["name", "GILD HALL"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 3], ["created_at", "2023-01-20 21:27:17.799515"], ["updated_at", "2023-01-20 21:27:17.799515"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "305 W 46th St"], ["name", "RIU PLAZA"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.800971"], ["updated_at", "2023-01-20 21:27:17.800971"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Via dei Reti 25"], ["name", "SAN LORENZO"], ["country", "🇮🇹Itale"], ["city", "Rome"], ["rating", 4], ["created_at", "2023-01-20 21:27:17.802327"], ["updated_at", "2023-01-20 21:27:17.802327"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Via Rigoberto"], ["name", "LA BELLA ROMA"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.803688"], ["updated_at", "2023-01-20 21:27:17.803688"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Via di pastore"], ["name", "DOLCE VITA"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 5], ["created_at", "2023-01-20 21:27:17.805245"], ["updated_at", "2023-01-20 21:27:17.805245"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (4.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 80], ["hotel_id", 1], ["created_at", "2023-01-20 21:27:17.816526"], ["updated_at", "2023-01-20 21:27:17.816526"], ["image", "room1-hotel1-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 90], ["hotel_id", 1], ["created_at", "2023-01-20 21:27:17.822352"], ["updated_at", "2023-01-20 21:27:17.822352"], ["image", "room2-hotel1-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 200], ["hotel_id", 1], ["created_at", "2023-01-20 21:27:17.823919"], ["updated_at", "2023-01-20 21:27:17.823919"], ["image", "room3-hotel1-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.5ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 77], ["hotel_id", 2], ["created_at", "2023-01-20 21:27:17.825457"], ["updated_at", "2023-01-20 21:27:17.825457"], ["image", "room4-hotel2-simple.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (2.9ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 95], ["hotel_id", 2], ["created_at", "2023-01-20 21:27:17.827324"], ["updated_at", "2023-01-20 21:27:17.827324"], ["image", "room5-hotel2-double.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.7ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 250], ["hotel_id", 2], ["created_at", "2023-01-20 21:27:17.831656"], ["updated_at", "2023-01-20 21:27:17.831656"], ["image", "room6-hotel2-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 88], ["hotel_id", 3], ["created_at", "2023-01-20 21:27:17.833583"], ["updated_at", "2023-01-20 21:27:17.833583"], ["image", "room7-hotel3-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 99], ["hotel_id", 3], ["created_at", "2023-01-20 21:27:17.835033"], ["updated_at", "2023-01-20 21:27:17.835033"], ["image", "room8-hotel3-double.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 350], ["hotel_id", 3], ["created_at", "2023-01-20 21:27:17.836607"], ["updated_at", "2023-01-20 21:27:17.836607"], ["image", "room9-hotel3-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 58], ["hotel_id", 4], ["created_at", "2023-01-20 21:27:17.838441"], ["updated_at", "2023-01-20 21:27:17.838441"], ["image", "room10-hotel4-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 69], ["hotel_id", 4], ["created_at", "2023-01-20 21:27:17.840006"], ["updated_at", "2023-01-20 21:27:17.840006"], ["image", "room11-hotel4-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 150], ["hotel_id", 4], ["created_at", "2023-01-20 21:27:17.841576"], ["updated_at", "2023-01-20 21:27:17.841576"], ["image", "room12-hotel4-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 98], ["hotel_id", 5], ["created_at", "2023-01-20 21:27:17.843259"], ["updated_at", "2023-01-20 21:27:17.843259"], ["image", "room13-hotel5-simple.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (1.1ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 119], ["hotel_id", 5], ["created_at", "2023-01-20 21:27:17.845122"], ["updated_at", "2023-01-20 21:27:17.845122"], ["image", "room14-hotel5-double.jpg"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 220], ["hotel_id", 5], ["created_at", "2023-01-20 21:27:17.849208"], ["updated_at", "2023-01-20 21:27:17.849208"], ["image", "room15-hotel5-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 75], ["hotel_id", 6], ["created_at", "2023-01-20 21:27:17.850804"], ["updated_at", "2023-01-20 21:27:17.850804"], ["image", "room16-hotel6-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 91], ["hotel_id", 6], ["created_at", "2023-01-20 21:27:17.852485"], ["updated_at", "2023-01-20 21:27:17.852485"], ["image", "room17-hotel6-double.jpg"]]
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.6ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 210], ["hotel_id", 6], ["created_at", "2023-01-20 21:27:17.875259"], ["updated_at", "2023-01-20 21:27:17.875259"], ["image", "room18-hotel6-suite.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 76], ["hotel_id", 7], ["created_at", "2023-01-20 21:27:17.883879"], ["updated_at", "2023-01-20 21:27:17.883879"], ["image", "room19-hotel7-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 85], ["hotel_id", 7], ["created_at", "2023-01-20 21:27:17.885892"], ["updated_at", "2023-01-20 21:27:17.885892"], ["image", "room20-hotel7-double.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 550], ["hotel_id", 7], ["created_at", "2023-01-20 21:27:17.887739"], ["updated_at", "2023-01-20 21:27:17.887739"], ["image", "room21-hotel7-suite.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 58], ["hotel_id", 8], ["created_at", "2023-01-20 21:27:17.889748"], ["updated_at", "2023-01-20 21:27:17.889748"], ["image", "room22-hotel8-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 69], ["hotel_id", 8], ["created_at", "2023-01-20 21:27:17.891572"], ["updated_at", "2023-01-20 21:27:17.891572"], ["image", "room23-hotel8-double.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.8ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 150], ["hotel_id", 8], ["created_at", "2023-01-20 21:27:17.893574"], ["updated_at", "2023-01-20 21:27:17.893574"], ["image", "room24-hotel8-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 98], ["hotel_id", 9], ["created_at", "2023-01-20 21:27:17.897197"], ["updated_at", "2023-01-20 21:27:17.897197"], ["image", "room25-hotel9-simple.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 169], ["hotel_id", 9], ["created_at", "2023-01-20 21:27:17.899171"], ["updated_at", "2023-01-20 21:27:17.899171"], ["image", "room26-hotel9-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 250], ["hotel_id", 9], ["created_at", "2023-01-20 21:27:17.900829"], ["updated_at", "2023-01-20 21:27:17.900829"], ["image", "room27-hotel9-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 68], ["hotel_id", 10], ["created_at", "2023-01-20 21:27:17.902748"], ["updated_at", "2023-01-20 21:27:17.902748"], ["image", "room28-hotel10-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 169], ["hotel_id", 10], ["created_at", "2023-01-20 21:27:17.904572"], ["updated_at", "2023-01-20 21:27:17.904572"], ["image", "room29-hotel10-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 290], ["hotel_id", 10], ["created_at", "2023-01-20 21:27:17.906367"], ["updated_at", "2023-01-20 21:27:17.906367"], ["image", "room30-hotel10-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 72], ["hotel_id", 11], ["created_at", "2023-01-20 21:27:17.908074"], ["updated_at", "2023-01-20 21:27:17.908074"], ["image", "room31-hotel11-simple.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 92], ["hotel_id", 11], ["created_at", "2023-01-20 21:27:17.909961"], ["updated_at", "2023-01-20 21:27:17.909961"], ["image", "room32-hotel11-double.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 212], ["hotel_id", 11], ["created_at", "2023-01-20 21:27:17.911555"], ["updated_at", "2023-01-20 21:27:17.911555"], ["image", "room33-hotel11-suite.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 73], ["hotel_id", 12], ["created_at", "2023-01-20 21:27:17.913136"], ["updated_at", "2023-01-20 21:27:17.913136"], ["image", "room34-hotel12-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 83], ["hotel_id", 12], ["created_at", "2023-01-20 21:27:17.918119"], ["updated_at", "2023-01-20 21:27:17.918119"], ["image", "room35-hotel12-double.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 350], ["hotel_id", 12], ["created_at", "2023-01-20 21:27:17.919829"], ["updated_at", "2023-01-20 21:27:17.919829"], ["image", "room36-hotel12-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 54], ["hotel_id", 13], ["created_at", "2023-01-20 21:27:17.921587"], ["updated_at", "2023-01-20 21:27:17.921587"], ["image", "room37-hotel13-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 64], ["hotel_id", 13], ["created_at", "2023-01-20 21:27:17.923374"], ["updated_at", "2023-01-20 21:27:17.923374"], ["image", "room38-hotel13-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 154], ["hotel_id", 13], ["created_at", "2023-01-20 21:27:17.925206"], ["updated_at", "2023-01-20 21:27:17.925206"], ["image", "room39-hotel13-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 95], ["hotel_id", 14], ["created_at", "2023-01-20 21:27:17.926927"], ["updated_at", "2023-01-20 21:27:17.926927"], ["image", "room40-hotel14-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 165], ["hotel_id", 14], ["created_at", "2023-01-20 21:27:17.928726"], ["updated_at", "2023-01-20 21:27:17.928726"], ["image", "room41-hotel14-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 255], ["hotel_id", 14], ["created_at", "2023-01-20 21:27:17.930475"], ["updated_at", "2023-01-20 21:27:17.930475"], ["image", "room42-hotel14-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 66], ["hotel_id", 15], ["created_at", "2023-01-20 21:27:17.932158"], ["updated_at", "2023-01-20 21:27:17.932158"], ["image", "room43-hotel15-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 166], ["hotel_id", 15], ["created_at", "2023-01-20 21:27:17.933875"], ["updated_at", "2023-01-20 21:27:17.933875"], ["image", "room44-hotel15-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 296], ["hotel_id", 15], ["created_at", "2023-01-20 21:27:17.935635"], ["updated_at", "2023-01-20 21:27:17.935635"], ["image", "room45-hotel15-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (13.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (1.7ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (1.7ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.7ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 28]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 29]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 30]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 31]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 32]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 33]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 34]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 35]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 36]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 37]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 38]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 39]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 40]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 41]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 42]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 43]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 44]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 45]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruben@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruben@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:32:39.680393"], ["updated_at", "2023-01-20 21:32:39.680393"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ingrid@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ingrid@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:32:39.925447"], ["updated_at", "2023-01-20 21:32:39.925447"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ariana@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ariana@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:32:40.170163"], ["updated_at", "2023-01-20 21:32:40.170163"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "twix@gmail.fr"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "twix@gmail.fr"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-20 21:32:40.413740"], ["updated_at", "2023-01-20 21:32:40.413740"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.7ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "14 Rue du Stade"], ["name", "CREOLIA"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 4], ["created_at", "2023-01-20 21:32:40.423135"], ["updated_at", "2023-01-20 21:32:40.423135"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "91 bis allée des Topazes"], ["name", "BELLEPIERRE"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 3], ["created_at", "2023-01-20 21:32:40.425269"], ["updated_at", "2023-01-20 21:32:40.425269"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "1 Rue Issop Ravate"], ["name", "DINA MORGABINE"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.426775"], ["updated_at", "2023-01-20 21:32:40.426775"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "17 Rue Robert Blache"], ["name", "LE ROBINET D'OR"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.428351"], ["updated_at", "2023-01-20 21:32:40.428351"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "12 Rue Saint-Roch"], ["name", "LOUVRE MONTANA"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 3], ["created_at", "2023-01-20 21:32:40.429748"], ["updated_at", "2023-01-20 21:32:40.429748"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "133 Avenue de Villiers"], ["name", "KORNER ETOILE"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 4], ["created_at", "2023-01-20 21:32:40.431174"], ["updated_at", "2023-01-20 21:32:40.431174"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Rambla Méndez Núñez"], ["name", "MELIA"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.432637"], ["updated_at", "2023-01-20 21:32:40.432637"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Avenida de Niza 38"], ["name", "ALMIRANTE"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.434057"], ["updated_at", "2023-01-20 21:32:40.434057"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "340 W 40th St"], ["name", "TBA TIME SQUARE"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 4], ["created_at", "2023-01-20 21:32:40.435476"], ["updated_at", "2023-01-20 21:32:40.435476"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Carrer Sol Naixent 6"], ["name", "ALBAHIA"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.436845"], ["updated_at", "2023-01-20 21:32:40.436845"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "15 Gold St"], ["name", "GILD HALL"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 3], ["created_at", "2023-01-20 21:32:40.438261"], ["updated_at", "2023-01-20 21:32:40.438261"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "305 W 46th St"], ["name", "RIU PLAZA"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.439655"], ["updated_at", "2023-01-20 21:32:40.439655"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Via dei Reti 25"], ["name", "SAN LORENZO"], ["country", "🇮🇹Itale"], ["city", "Rome"], ["rating", 4], ["created_at", "2023-01-20 21:32:40.441033"], ["updated_at", "2023-01-20 21:32:40.441033"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Via Rigoberto"], ["name", "LA BELLA ROMA"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.442461"], ["updated_at", "2023-01-20 21:32:40.442461"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "Via di pastore"], ["name", "DOLCE VITA"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 5], ["created_at", "2023-01-20 21:32:40.443828"], ["updated_at", "2023-01-20 21:32:40.443828"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.8ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 80], ["hotel_id", 16], ["created_at", "2023-01-20 21:32:40.446573"], ["updated_at", "2023-01-20 21:32:40.446573"], ["image", "room1-hotel1-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 90], ["hotel_id", 16], ["created_at", "2023-01-20 21:32:40.450879"], ["updated_at", "2023-01-20 21:32:40.450879"], ["image", "room2-hotel1-double.jpeg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 200], ["hotel_id", 16], ["created_at", "2023-01-20 21:32:40.452600"], ["updated_at", "2023-01-20 21:32:40.452600"], ["image", "room3-hotel1-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 77], ["hotel_id", 17], ["created_at", "2023-01-20 21:32:40.454255"], ["updated_at", "2023-01-20 21:32:40.454255"], ["image", "room4-hotel2-simple.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 95], ["hotel_id", 17], ["created_at", "2023-01-20 21:32:40.455748"], ["updated_at", "2023-01-20 21:32:40.455748"], ["image", "room5-hotel2-double.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 250], ["hotel_id", 17], ["created_at", "2023-01-20 21:32:40.457418"], ["updated_at", "2023-01-20 21:32:40.457418"], ["image", "room6-hotel2-suite.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 88], ["hotel_id", 18], ["created_at", "2023-01-20 21:32:40.458797"], ["updated_at", "2023-01-20 21:32:40.458797"], ["image", "room7-hotel3-simple.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 99], ["hotel_id", 18], ["created_at", "2023-01-20 21:32:40.460108"], ["updated_at", "2023-01-20 21:32:40.460108"], ["image", "room8-hotel3-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 350], ["hotel_id", 18], ["created_at", "2023-01-20 21:32:40.461638"], ["updated_at", "2023-01-20 21:32:40.461638"], ["image", "room9-hotel3-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 58], ["hotel_id", 19], ["created_at", "2023-01-20 21:32:40.463176"], ["updated_at", "2023-01-20 21:32:40.463176"], ["image", "room10-hotel4-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 69], ["hotel_id", 19], ["created_at", "2023-01-20 21:32:40.464667"], ["updated_at", "2023-01-20 21:32:40.464667"], ["image", "room11-hotel4-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 150], ["hotel_id", 19], ["created_at", "2023-01-20 21:32:40.466168"], ["updated_at", "2023-01-20 21:32:40.466168"], ["image", "room12-hotel4-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 98], ["hotel_id", 20], ["created_at", "2023-01-20 21:32:40.467676"], ["updated_at", "2023-01-20 21:32:40.467676"], ["image", "room13-hotel5-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 119], ["hotel_id", 20], ["created_at", "2023-01-20 21:32:40.469206"], ["updated_at", "2023-01-20 21:32:40.469206"], ["image", "room14-hotel5-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 220], ["hotel_id", 20], ["created_at", "2023-01-20 21:32:40.470737"], ["updated_at", "2023-01-20 21:32:40.470737"], ["image", "room15-hotel5-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 75], ["hotel_id", 21], ["created_at", "2023-01-20 21:32:40.472288"], ["updated_at", "2023-01-20 21:32:40.472288"], ["image", "room16-hotel6-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 91], ["hotel_id", 21], ["created_at", "2023-01-20 21:32:40.473836"], ["updated_at", "2023-01-20 21:32:40.473836"], ["image", "room17-hotel6-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 210], ["hotel_id", 21], ["created_at", "2023-01-20 21:32:40.475339"], ["updated_at", "2023-01-20 21:32:40.475339"], ["image", "room18-hotel6-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 76], ["hotel_id", 22], ["created_at", "2023-01-20 21:32:40.476859"], ["updated_at", "2023-01-20 21:32:40.476859"], ["image", "room19-hotel7-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 85], ["hotel_id", 22], ["created_at", "2023-01-20 21:32:40.478349"], ["updated_at", "2023-01-20 21:32:40.478349"], ["image", "room20-hotel7-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 550], ["hotel_id", 22], ["created_at", "2023-01-20 21:32:40.479832"], ["updated_at", "2023-01-20 21:32:40.479832"], ["image", "room21-hotel7-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 58], ["hotel_id", 23], ["created_at", "2023-01-20 21:32:40.481221"], ["updated_at", "2023-01-20 21:32:40.481221"], ["image", "room22-hotel8-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 69], ["hotel_id", 23], ["created_at", "2023-01-20 21:32:40.482723"], ["updated_at", "2023-01-20 21:32:40.482723"], ["image", "room23-hotel8-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 150], ["hotel_id", 23], ["created_at", "2023-01-20 21:32:40.484221"], ["updated_at", "2023-01-20 21:32:40.484221"], ["image", "room24-hotel8-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 98], ["hotel_id", 24], ["created_at", "2023-01-20 21:32:40.485714"], ["updated_at", "2023-01-20 21:32:40.485714"], ["image", "room25-hotel9-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 169], ["hotel_id", 24], ["created_at", "2023-01-20 21:32:40.487196"], ["updated_at", "2023-01-20 21:32:40.487196"], ["image", "room26-hotel9-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 250], ["hotel_id", 24], ["created_at", "2023-01-20 21:32:40.488724"], ["updated_at", "2023-01-20 21:32:40.488724"], ["image", "room27-hotel9-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 68], ["hotel_id", 25], ["created_at", "2023-01-20 21:32:40.490254"], ["updated_at", "2023-01-20 21:32:40.490254"], ["image", "room28-hotel10-simple.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 169], ["hotel_id", 25], ["created_at", "2023-01-20 21:32:40.491771"], ["updated_at", "2023-01-20 21:32:40.491771"], ["image", "room29-hotel10-double.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 290], ["hotel_id", 25], ["created_at", "2023-01-20 21:32:40.493315"], ["updated_at", "2023-01-20 21:32:40.493315"], ["image", "room30-hotel10-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 72], ["hotel_id", 26], ["created_at", "2023-01-20 21:32:40.494813"], ["updated_at", "2023-01-20 21:32:40.494813"], ["image", "room31-hotel11-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 92], ["hotel_id", 26], ["created_at", "2023-01-20 21:32:40.496315"], ["updated_at", "2023-01-20 21:32:40.496315"], ["image", "room32-hotel11-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (1.6ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 212], ["hotel_id", 26], ["created_at", "2023-01-20 21:32:40.497789"], ["updated_at", "2023-01-20 21:32:40.497789"], ["image", "room33-hotel11-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 73], ["hotel_id", 27], ["created_at", "2023-01-20 21:32:40.500653"], ["updated_at", "2023-01-20 21:32:40.500653"], ["image", "room34-hotel12-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 83], ["hotel_id", 27], ["created_at", "2023-01-20 21:32:40.502142"], ["updated_at", "2023-01-20 21:32:40.502142"], ["image", "room35-hotel12-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 350], ["hotel_id", 27], ["created_at", "2023-01-20 21:32:40.503585"], ["updated_at", "2023-01-20 21:32:40.503585"], ["image", "room36-hotel12-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 54], ["hotel_id", 28], ["created_at", "2023-01-20 21:32:40.505087"], ["updated_at", "2023-01-20 21:32:40.505087"], ["image", "room37-hotel13-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 64], ["hotel_id", 28], ["created_at", "2023-01-20 21:32:40.506596"], ["updated_at", "2023-01-20 21:32:40.506596"], ["image", "room38-hotel13-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 154], ["hotel_id", 28], ["created_at", "2023-01-20 21:32:40.508115"], ["updated_at", "2023-01-20 21:32:40.508115"], ["image", "room39-hotel13-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 95], ["hotel_id", 29], ["created_at", "2023-01-20 21:32:40.509666"], ["updated_at", "2023-01-20 21:32:40.509666"], ["image", "room40-hotel14-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 165], ["hotel_id", 29], ["created_at", "2023-01-20 21:32:40.511234"], ["updated_at", "2023-01-20 21:32:40.511234"], ["image", "room41-hotel14-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 255], ["hotel_id", 29], ["created_at", "2023-01-20 21:32:40.512794"], ["updated_at", "2023-01-20 21:32:40.512794"], ["image", "room42-hotel14-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 66], ["hotel_id", 30], ["created_at", "2023-01-20 21:32:40.514201"], ["updated_at", "2023-01-20 21:32:40.514201"], ["image", "room43-hotel15-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 166], ["hotel_id", 30], ["created_at", "2023-01-20 21:32:40.515711"], ["updated_at", "2023-01-20 21:32:40.515711"], ["image", "room44-hotel15-double.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 296], ["hotel_id", 30], ["created_at", "2023-01-20 21:32:40.517277"], ["updated_at", "2023-01-20 21:32:40.517277"], ["image", "room45-hotel15-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Create (7.1ms)[0m  [1m[32mINSERT INTO "bookings" ("arrival_date", "departure_date", "total_price", "room_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["arrival_date", "2022-11-22"], ["departure_date", "2022-11-24"], ["total_price", 300], ["room_id", 69], ["user_id", 5], ["created_at", "2023-01-20 21:32:40.525496"], ["updated_at", "2023-01-20 21:32:40.525496"], ["status", "accepted"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Create (0.4ms)[0m  [1m[32mINSERT INTO "bookings" ("arrival_date", "departure_date", "total_price", "room_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["arrival_date", "2022-11-23"], ["departure_date", "2022-11-24"], ["total_price", 90], ["room_id", 47], ["user_id", 6], ["created_at", "2023-01-20 21:32:40.535243"], ["updated_at", "2023-01-20 21:32:40.535243"], ["status", "accepted"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Create (0.4ms)[0m  [1m[32mINSERT INTO "bookings" ("arrival_date", "departure_date", "total_price", "room_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["arrival_date", "2022-11-25"], ["departure_date", "2022-11-26"], ["total_price", 58], ["room_id", 55], ["user_id", 6], ["created_at", "2023-01-20 21:32:40.537060"], ["updated_at", "2023-01-20 21:32:40.537060"], ["status", "accepted"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (2.1ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Superbe chambre! l'hotel au top!🤩"], ["user_id", 5], ["room_id", 69], ["created_at", "2023-01-20 21:32:40.544405"], ["updated_at", "2023-01-20 21:32:40.544405"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Bof, je ne reviendrais pas sur cet hotel. La chambre etait salle!🤮"], ["user_id", 6], ["room_id", 47], ["created_at", "2023-01-20 21:32:40.547933"], ["updated_at", "2023-01-20 21:32:40.547933"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "La chambre c'etait bien mais la reception reste penible😞"], ["user_id", 6], ["room_id", 55], ["created_at", "2023-01-20 21:32:40.549688"], ["updated_at", "2023-01-20 21:32:40.549688"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m

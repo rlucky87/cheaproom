@@ -6,11 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Cleaning database...'
-Booking.destroy_all
-Hotel.destroy_all
-Room.destroy_all
-Review.destroy_all
 User.destroy_all
+Room.destroy_all
+Booking.destroy_all
+Review.destroy_all
 
 puts 'Creating users...'
 
@@ -92,23 +91,25 @@ puts 'Creating bookings...'
 booking1 = Booking.create!(room: room24,
   user: user1,
   arrival_date: "2022-11-22",
-  depature_date: "2022-11-24",
-  total_price: 300€,
+  departure_date: "2022-11-24",
+  total_price: "300€",
   status: "accepted" )
 
 booking2 = Booking.create!(room: room2,
   user: user2,
   arrival_date: "2022-11-23",
-  depature_date: "2022-11-24",
-  total_price: 90€,
+  departure_date: "2022-11-24",
+  total_price: "90€",
   status: "accepted" )
 
 booking3 = Booking.create!(room: room10,
   user: user2,
   arrival_date: "2022-11-25",
-  depature_date: "2022-11-26",
-  total_price: 58€,
+  departure_date: "2022-11-26",
+  total_price: "58€",
   status: "accepted" )
+
+puts 'Creating reviews...'
 
 review1 = Review.create!(user: user1,
   room: room24,
