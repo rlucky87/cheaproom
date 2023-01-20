@@ -1,3 +1,7 @@
-class HotelController < ApplicationController
+class HotelsController < ApplicationController
+  def index
+  end
 
+  def show
+  end
 end
