@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "pages#home"
   resources :hotels, only: [:index, :show] do
-    resources :roomd, only: [:index, :show] do
-      resources :bookings, only: [:create]
+    resources :rooms, only: [:index, :show] do
+      resources :rooms, only: [:new, :create] do
+        resources :bookings, only: [:create]
     end
   end
   namespace :host do
