@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :rooms, only: [:index, :show] do
       resources :rooms, only: [:new, :create] do
         resources :bookings, only: [:create]
+      end
     end
   end
   namespace :host do
