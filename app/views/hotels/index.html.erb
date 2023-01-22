@@ -1,6 +1,7 @@
 <h1>Hotels#index</h1>
 <p>Find me in app/views/hotels/index.html.erb</p>
-<% @hotels.each do |hotel| %>
-
-  <%= hotel.country %>
+<%= form_tag hotels_path, method: :get do %>
+  <%= select_tag :country, options_for_select(Hotel.pluck(:country).uniq) %>
+  <%= submit_tag "Filtrer" %>
+  <%= link_to "Voir tous les hôtels de ce pays", hotels_show_path(country: params[:country]) %>
 <% end %>

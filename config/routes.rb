@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root to: "pages#home"
+
   resources :hotels, only: [:index, :show] do
     resources :rooms, only: [:index, :show] do
       resources :rooms, only: [:new, :create] do
@@ -14,17 +15,17 @@ Rails.application.routes.draw do
       end
     end
   end
-  namespace :host do
-    resources :stars, only: [:new, :create]
+  # namespace :host do
+  #   resources :stars, only: [:new, :create]
 
-    resources :bookings, only: [] do
-      member do
-        patch :accept
-        patch :decline
-      end
-    end
+  #   resources :bookings, only: [] do
+  #     member do
+  #       patch :accept
+  #       patch :decline
+  #     end
+  #   end
 
-  end
+  # end
 
   resource :dashboard, only: :show
 end

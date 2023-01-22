@@ -1207,3 +1207,97 @@ Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.5ms | Allocations: 2997
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "La chambre c'etait bien mais la reception reste penible😞"], ["user_id", 11], ["room_id", 100], ["created_at", "2023-01-22 20:17:26.964125"], ["updated_at", "2023-01-22 20:17:26.964125"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/hotels/index" for ::1 at 2023-01-22 21:18:17 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" IS NULL[0m
+  ↳ app/views/hotels/index.html.erb:3
+  Rendered hotels/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 3489)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 5505)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 9.1ms | Allocations: 5794)
+
+
+Started GET "/hotels/index" for ::1 at 2023-01-22 21:22:01 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.3ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1458)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3917)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 4.2ms | Allocations: 6378)
+
+
+Started GET "/hotels?country=%F0%9F%87%AA%F0%9F%87%B8Espa%C3%B1a&commit=Filtrer" for ::1 at 2023-01-22 21:22:23 +0100
+Processing by HotelsController#index as HTML
+  Parameters: {"country"=>"🇪🇸España", "commit"=>"Filtrer"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.3ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3032)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 3360)
+
+
+Started GET "/hotels?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union&commit=Filtrer" for ::1 at 2023-01-22 21:30:25 +0100
+Processing by HotelsController#index as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion", "commit"=>"Filtrer"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  Rendered hotels/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1277)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 9.6ms | Allocations: 6252)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hotels#index</h1>
+<p>Find me in app/views/hotels/index.html.erb</p>
+<%= form_tag hotels_path, method: :get do %>
+  <%= select_tag :country, options_for_select(Hotel.pluck(:country).uniq) %>
+  <%= submit_tag "Filtrer" %>
+  <%= link_to "Voir tous les hôtels de ce pays", hotels_show_path(country: params[:country]) %>
+<% end %>
+<% end %>
+
+):
+1:    <h1>Hotels#index</h1>
+2:    <p>Find me in app/views/hotels/index.html.erb</p>
+3:    <%= form_tag hotels_path, method: :get do %>
+4:      <%= select_tag :country, options_for_select(Hotel.pluck(:country).uniq) %>
+5:      <%= submit_tag "Filtrer" %>
+6:      <%= link_to "Voir tous les hôtels de ce pays", hotels_show_path(country: params[:country]) %>
+7:    <% end %>
+8:    <% end %>
+  
+app/views/hotels/index.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/hotels/index.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/hotels/index.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/hotels/index.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/hotels/index.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+app/views/hotels/index.html.erb:10: syntax error, unexpected `end', expecting end-of-input
+Started GET "/hotels?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union&commit=Filtrer" for ::1 at 2023-01-22 21:30:49 +0100
+Processing by HotelsController#index as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion", "commit"=>"Filtrer"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (1.7ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1560)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3994)
+Completed 200 OK in 28ms (Views: 22.3ms | ActiveRecord: 1.7ms | Allocations: 4885)
+
+
+Started GET "/hotels/show?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union" for ::1 at 2023-01-22 21:30:53 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇷🇪La Réunion"]]
+  ↳ app/views/hotels/show.html.erb:3
+  Rendered hotels/show.html.erb within layouts/application (Duration: 30.1ms | Allocations: 6620)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 8828)
+Completed 200 OK in 52ms (Views: 44.5ms | ActiveRecord: 6.6ms | Allocations: 9239)
+
+

@@ -1,2 +1,8 @@
 <h1>Hotels#show</h1>
 <p>Find me in app/views/hotels/show.html.erb</p>
+<% @hotels.each do |hotel| %>
+  <%= hotel.name %>
+  <%= hotel.address %>
+  <%= hotel.rating %>
+<% end %>
+
