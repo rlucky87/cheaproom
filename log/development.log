@@ -772,3 +772,111 @@ Did you mean?  simple_format):
     6:     <%= f.label :email %><br />
   
 app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2023-01-22 20:44:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4909)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4997)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 16.9ms | Allocations: 11498)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<ActionView::Base:0x00000000013268>
+
+'.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+                                 ^^^^^^^^^^^^^^^
+Did you mean?  simple_format):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+    4:   data: {turbo: false}) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/hotels/index" for ::1 at 2023-01-22 20:44:15 +0100
+Processing by HotelsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 426)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-22 20:44:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 4592)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 4672)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 5344)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<ActionView::Base:0x00000000013600>
+
+'.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+                                 ^^^^^^^^^^^^^^^
+Did you mean?  simple_format):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+    4:   data: {turbo: false}) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/" for ::1 at 2023-01-22 20:44:51 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2080)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2168)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2928)
+
+
+  
+ActionView::Template::Error (The asset "video-file-name.mp4" is not present in the asset pipeline.
+):
+    1: <h1>Home</h1>
+    2: <video id="bg-video" autoplay loop muted>
+    3:     <source src="<%= asset_path 'video-file-name.mp4' %>" type="video/mp4">
+    4:     <source src="<%= asset_path 'video-file-name.webm' %>" type="video/webm">
+    5: </video>
+    6: 
+  
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2023-01-22 20:46:11 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2708)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 3529)
+
+
+Started GET "/hotels/index" for ::1 at 2023-01-22 20:46:14 +0100
+Processing by HotelsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-22 20:46:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 4960)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 5048)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 6097)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<ActionView::Base:0x00000000013d08>
+
+'.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+                                 ^^^^^^^^^^^^^^^
+Did you mean?  simple_format):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+    4:   data: {turbo: false}) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  
+app/views/devise/sessions/new.html.erb:3
