@@ -880,3 +880,28 @@ Did you mean?  simple_format):
     6:     <%= f.label :email %><br />
   
 app/views/devise/sessions/new.html.erb:3
+Started GET "/" for ::1 at 2023-01-22 20:54:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (Before process_action callback :authenticate_user! has not been defined):
+  
+app/controllers/pages_controller.rb:2:in `<class:PagesController>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2023-01-22 20:55:40 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | Allocations: 34117)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.0ms | Allocations: 36215)
+
+
+Started GET "/hotels/index" for ::1 at 2023-01-22 20:55:42 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  Rendered hotels/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2421)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3978)
+
+
