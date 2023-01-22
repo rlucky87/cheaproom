@@ -671,3 +671,104 @@ Migrating to AddImageToHotels (20230121102029)
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8083078935556892610)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-01-21 11:38:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 390)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 936)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 216.6ms | Allocations: 110681)
+Completed 200 OK in 224ms (Views: 219.6ms | ActiveRecord: 0.0ms | Allocations: 114950)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-21 11:38:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 6271)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 6369)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 4.3ms | Allocations: 13430)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<ActionView::Base:0x0000000000cf30>
+
+'.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+                                 ^^^^^^^^^^^^^^^
+Did you mean?  simple_format):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+    4:   data: {turbo: false}) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/" for ::1 at 2023-01-21 11:39:35 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 107)
+  Rendered shared/_flashes.html.erb (Duration: 0.8ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2901)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 3722)
+
+
+Started GET "/" for ::1 at 2023-01-21 11:51:24 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.1ms | Allocations: 4920)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 5009)
+Completed 500 Internal Server Error in 33ms (Allocations: 5804)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotels_index' for #<ActionView::Base:0x0000000000d368>
+
+'.freeze;@output_buffer.append=( link_to "Voir hotels", hotels_index );
+                                                        ^^^^^^^^^^^^
+Did you mean?  hotels_index_url):
+    1: <h1>Home</h1>
+    2: <%= link_to "Voir hotels", hotels_index %>
+  
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2023-01-21 11:52:13 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2655)
+Completed 200 OK in 16ms (Views: 13.6ms | Allocations: 3456)
+
+
+Started GET "/hotels/index" for ::1 at 2023-01-21 11:52:15 +0100
+Processing by HotelsController#index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 404)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-21 11:52:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.2ms | Allocations: 4958)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 5047)
+Completed 500 Internal Server Error in 23ms (Allocations: 6087)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<ActionView::Base:0x0000000000d7c8>
+
+'.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+                                 ^^^^^^^^^^^^^^^
+Did you mean?  simple_format):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+    4:   data: {turbo: false}) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+  
+app/views/devise/sessions/new.html.erb:3

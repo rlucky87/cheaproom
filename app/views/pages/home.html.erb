@@ -1,2 +1,7 @@
 <h1>Home</h1>
+<video id="bg-video" autoplay loop muted>
+    <source src="<%= asset_path 'video-file-name.mp4' %>" type="video/mp4">
+    <source src="<%= asset_path 'video-file-name.webm' %>" type="video/webm">
+</video>
 
+<%= link_to "Voir hotels", hotels_index_path %>
