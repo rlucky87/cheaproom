@@ -7,13 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Cleaning database...'
 User.destroy_all
-Room.destroy_all
 Booking.destroy_all
 Review.destroy_all
 
 puts 'Creating users...'
 
-user1 = User.create!(email:"Ruben@gmail.com", password:"123456")
+user1 = User.create!(email:"Ruben87@gmail.com", password:"123456")
 user2 = User.create!(email:"Ingrid@gmail.com", password:"123456")
 user3 = User.create!(email:"Ariana@gmail.com", password:"123456")
 user4 = User.create!(email:"Twix@gmail.fr", password:"123456")
