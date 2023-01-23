@@ -1301,3 +1301,310 @@ Processing by HotelsController#show as HTML
 Completed 200 OK in 52ms (Views: 44.5ms | ActiveRecord: 6.6ms | Allocations: 9239)
 
 
+Started GET "/hotels/show?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union" for ::1 at 2023-01-22 21:40:20 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇷🇪La Réunion"]]
+  ↳ app/views/hotels/show.html.erb:3
+  Rendered hotels/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 7643)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7728)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 10.4ms | Allocations: 12682)
+
+
+  
+ActionView::Template::Error (undefined method `rooms_path' for #<ActionView::Base:0x00000000028398>
+
+  '.freeze;@output_buffer.append=( link_to "Voir les chambres disponibles", rooms_path(hotel_id: hotel.id) );@output_buffer.safe_append='
+                                                                            ^^^^^^^^^^
+Did you mean?  root_path):
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.rating %>
+    7:   <%= link_to "Voir les chambres disponibles", rooms_path(hotel_id: hotel.id) %>
+    8: <% end %>
+  
+app/views/hotels/show.html.erb:7
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union" for ::1 at 2023-01-22 21:41:22 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (0.9ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇷🇪La Réunion"]]
+  ↳ app/views/hotels/show.html.erb:3
+  Rendered hotels/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1598)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 4039)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 0.9ms | Allocations: 4926)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-22 21:41:25 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1127)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1216)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 5.9ms | Allocations: 4052)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @rooms.each do |room| %>
+    <% if room.hotel_id == hotel.id %>
+      <%= room.type_of_room %>
+      <%= room.capacity %>
+      <%= room.price %>
+
+):
+1:    <% @rooms.each do |room| %>
+2:        <% if room.hotel_id == hotel.id %>
+3:          <%= room.type_of_room %>
+4:          <%= room.capacity %>
+5:          <%= room.price %>
+  
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-22 21:42:00 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1280)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2140)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @rooms.each do |room| %>
+    <% if room.hotel_id == hotel.id %>
+      <%= room.type_of_room %>
+      <%= room.capacity %>
+      <%= room.price %>
+    <% end %>
+
+):
+1:    <% @rooms.each do |room| %>
+2:        <% if room.hotel_id == hotel.id %>
+3:          <%= room.type_of_room %>
+4:          <%= room.capacity %>
+5:          <%= room.price %>
+6:        <% end %>
+  
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-22 21:42:35 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1214)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1303)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2164)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @hotels.each do |hotel| %>
+  <h3> <%= hotel.name %></h3>
+  <% @rooms.each do |room| %>
+    <% if room.hotel_id == hotel.id %>
+      <%= room.type_of_room %>
+      <%= room.capacity %>
+      <%= room.price %>
+
+
+):
+1:    <% @hotels.each do |hotel| %>
+2:      <h3> <%= hotel.name %></h3>
+3:      <% @rooms.each do |room| %>
+4:        <% if room.hotel_id == hotel.id %>
+5:          <%= room.type_of_room %>
+6:          <%= room.capacity %>
+7:          <%= room.price %>
+  
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-22 21:42:37 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1170)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1250)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1562)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @hotels.each do |hotel| %>
+  <h3> <%= hotel.name %></h3>
+  <% @rooms.each do |room| %>
+    <% if room.hotel_id == hotel.id %>
+      <%= room.type_of_room %>
+      <%= room.capacity %>
+      <%= room.price %>
+
+
+):
+1:    <% @hotels.each do |hotel| %>
+2:      <h3> <%= hotel.name %></h3>
+3:      <% @rooms.each do |room| %>
+4:        <% if room.hotel_id == hotel.id %>
+5:          <%= room.type_of_room %>
+6:          <%= room.capacity %>
+7:          <%= room.price %>
+  
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+app/views/rooms/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-22 21:43:53 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1960)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2048)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+            @virtual_path = "rooms/index";; @hotels.each do |hotel| 
+                                                   ^^^^^):
+    1: <% @hotels.each do |hotel| %>
+    2:   <h3> <%= hotel.name %></h3>
+    3:   <% @rooms.each do |room| %>
+    4:     <% if room.hotel_id == hotel.id %>
+  
+app/views/rooms/index.html.erb:1
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-23 17:12:41 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1682)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1761)
+Completed 500 Internal Server Error in 6ms (Allocations: 2069)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+            @virtual_path = "rooms/index";; @hotels.each do |hotel| 
+                                                   ^^^^^):
+    1: <% @hotels.each do |hotel| %>
+    2:   <h3> <%= hotel.name %></h3>
+    3:   <% @rooms.each do |room| %>
+    4:     <% if room.hotel_id == hotel.id %>
+  
+app/views/rooms/index.html.erb:1
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-23 17:13:11 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1319)
+Completed 500 Internal Server Error in 11ms (Allocations: 2126)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+  <h3> <%= hotel.name %></h3>
+  <% @rooms.each do |room| %>
+    <% if room.hotel_id == hotel.id %>
+      <%= room.type_of_room %>
+      <%= room.capacity %>
+      <%= room.price %>
+    <% end %>
+  <% end %>
+<% end %>
+
+):
+1:    
+2:      <h3> <%= hotel.name %></h3>
+3:      <% @rooms.each do |room| %>
+4:        <% if room.hotel_id == hotel.id %>
+5:          <%= room.type_of_room %>
+6:          <%= room.capacity %>
+7:          <%= room.price %>
+8:        <% end %>
+9:      <% end %>
+10:    <% end %>
+  
+app/views/rooms/index.html.erb:12: syntax error, unexpected `end', expecting end-of-input
+app/views/rooms/index.html.erb:12: syntax error, unexpected `end', expecting end-of-input
+app/views/rooms/index.html.erb:12: syntax error, unexpected `end', expecting end-of-input
+app/views/rooms/index.html.erb:12: syntax error, unexpected `end', expecting end-of-input
+app/views/rooms/index.html.erb:12: syntax error, unexpected `end', expecting end-of-input
+app/views/rooms/index.html.erb:12: syntax error, unexpected `end', expecting end-of-input
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-23 17:13:28 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 5322)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 5410)
+Completed 500 Internal Server Error in 22ms (Allocations: 6264)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotel' for #<ActionView::Base:0x00000000029e50>
+
+  <h3> '.freeze;@output_buffer.append=( hotel.name );@output_buffer.safe_append='</h3>
+                                        ^^^^^
+Did you mean?  hotel_url):
+    1: 
+    2:   <h3> <%= hotel.name %></h3>
+    3:   <% @rooms.each do |room| %>
+    4:     <% if room.hotel_id == hotel.id %>
+    5:       <%= room.type_of_room %>
+  
+app/views/rooms/index.html.erb:2
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-23 17:13:44 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1933)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2021)
+Completed 500 Internal Server Error in 12ms (Allocations: 2873)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass
+
+  <h3> '.freeze;@output_buffer.append=( @hotel.name );@output_buffer.safe_append='</h3>
+                                              ^^^^^):
+    1: 
+    2:   <h3> <%= @hotel.name %></h3>
+    3:   <% @rooms.each do |room| %>
+    4:     <% if room.hotel_id == hotel.id %>
+    5:       <%= room.type_of_room %>
+  
+app/views/rooms/index.html.erb:2
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-23 17:14:35 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2606)
+Completed 200 OK in 19ms (Views: 16.2ms | Allocations: 3495)
+
+

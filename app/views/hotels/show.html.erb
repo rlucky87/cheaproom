@@ -4,5 +4,5 @@
   <%= hotel.name %>
   <%= hotel.address %>
   <%= hotel.rating %>
+  <%= link_to "Voir les chambres disponibles", hotel_rooms_path(hotel_id: hotel.id) %>
 <% end %>
-
