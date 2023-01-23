@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
 
 
   def show
-    @room = Room.find(params[:id])
+    @room = Room.where(hotel_id: params[:hotel_id])
   end
 
 end

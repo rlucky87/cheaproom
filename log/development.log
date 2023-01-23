@@ -1608,3 +1608,22 @@ Processing by RoomsController#index as HTML
 Completed 200 OK in 19ms (Views: 16.2ms | Allocations: 3495)
 
 
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-23 21:50:16 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1569)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1657)
+Completed 500 Internal Server Error in 16ms (Allocations: 2515)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rooms", :hotel_id=>"1"}, missing required keys: [:id]
+Did you mean?  hotel_room_url):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:   <%= link_to "Voir detail de la chambre", hotel_room_path %>
+  
+app/views/rooms/index.html.erb:4
