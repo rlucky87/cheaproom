@@ -1,4 +1,4 @@
 
   <h1>ROOMS INDEX</h1>
 
-  <%= link_to "Voir detail de la chambre", hotel_room_path %>
+ <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) %>
