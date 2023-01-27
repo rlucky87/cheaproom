@@ -2319,3 +2319,215 @@ ActionView::Template::Error (undefined method `id' for nil:NilClass
     4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) %>
   
 app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-26 21:55:10 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (7.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1793)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1872)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 58.5ms | Allocations: 5744)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass
+
+ '.freeze;@output_buffer.append=( link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) );
+                                                                                                                ^^^):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) %>
+  
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:21:49 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5107)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5195)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 15.3ms | Allocations: 9396)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotel' for #<ActionView::Base:0x000000000544e8>
+
+ '.freeze;@output_buffer.append=( link_to "Voir la chambre", hotel_room_path(hotel_id: hotel.id, room_id: room.id) );
+                                                                                       ^^^^^
+Did you mean?  @hotel):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: hotel.id, room_id: room.id) %>
+  
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:22:12 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1747)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 1835)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms | Allocations: 3255)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rooms", :hotel_id=>#<Hotel id: 31, address: "14 Rue du Stade", name: "CREOLIA", country: "🇷🇪La Réunion", city: "Saint-Denis", rating: 4, created_at: "2023-01-22 20:17:26.818346000 +0000", updated_at: "2023-01-22 20:17:26.818346000 +0000", image: "hotel1.jpg">, :room_id=>nil}, missing required keys: [:id]
+Did you mean?  hotel_room_url):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel, room_id: @room) %>
+  
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:23:35 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.8ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1631)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms | Allocations: 3051)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rooms", :hotel_id=>31, :room_id=>nil}, missing required keys: [:id]
+Did you mean?  hotel_room_url):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room) %>
+  
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:24:27 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1950)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2038)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms | Allocations: 3458)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass
+
+ '.freeze;@output_buffer.append=( link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) );
+                                                                                                                ^^^):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) %>
+  
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:29:37 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+Completed 404 Not Found in 35ms (ActiveRecord: 28.2ms | Allocations: 6380)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Room without an ID):
+  
+app/controllers/rooms_controller.rb:5:in `index'
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:30:37 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 5.0ms | Allocations: 5916)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/rooms_controller.rb:5:in `index'
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:33:12 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1749)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1837)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 18.0ms | Allocations: 8628)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass
+
+ '.freeze;@output_buffer.append=( link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) );
+                                                                                                                ^^^):
+    1: 
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4:  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: @room.id) %>
+  
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:36:46 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.9ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (7.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 31]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 5478)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 5563)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 11.2ms | Allocations: 6976)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rooms", :hotel_id=>31, :room_id=>91}, missing required keys: [:id]
+Did you mean?  hotel_room_url):
+    2:   <h1>ROOMS INDEX</h1>
+    3: 
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, room_id: room.id) %>
+    6: <% end %>
+  
+app/views/rooms/index.html.erb:5
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/31/rooms" for ::1 at 2023-01-27 19:42:00 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"31"}
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 31]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1110)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3557)
+Completed 200 OK in 68ms (Views: 20.8ms | ActiveRecord: 9.9ms | Allocations: 7950)
+
+
+Started GET "/hotels/31/rooms/91" for ::1 at 2023-01-27 19:42:07 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"31", "id"=>"91"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2096)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 4017)
+
+
