@@ -3155,3 +3155,69 @@ Processing by RoomsController#index as HTML
 Completed 200 OK in 27ms (Views: 20.0ms | ActiveRecord: 1.3ms | Allocations: 6648)
 
 
+Started GET "/hotels/32/rooms/94" for ::1 at 2023-01-28 11:42:09 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"94"}
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2094)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 3419)
+
+
+Started GET "/hotels/32/rooms/94" for ::1 at 2023-01-28 11:42:48 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"94"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4759)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4847)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms | Allocations: 6615)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `room' for #<ActionView::Base:0x0000000000ea60>
+
+'.freeze;@output_buffer.append=( image_tag room.image );
+                                           ^^^^
+Did you mean?  @room):
+    1: <h1>ROOM SHOW</h1>
+    2: <%= image_tag room.image %>
+  
+app/views/rooms/show.html.erb:2
+Started GET "/hotels/32/rooms/94" for ::1 at 2023-01-28 11:43:02 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"94"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1066)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3196)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 0.9ms | Allocations: 5072)
+
+
+Started GET "/hotels/32/rooms/94" for ::1 at 2023-01-28 11:43:42 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"94"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3182)
+Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 1.0ms | Allocations: 5063)
+
+
