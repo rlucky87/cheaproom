@@ -2,5 +2,7 @@
   <h1>ROOMS INDEX</h1>
 
 <% @rooms.each do |room| %>
-  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id)  %>
+  <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id) %>
+  <%= image_tag room.image %>
 <% end %>
+

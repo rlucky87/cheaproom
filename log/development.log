@@ -2531,3 +2531,599 @@ Processing by RoomsController#show as HTML
 Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 4017)
 
 
+Started GET "/hotels/index" for ::1 at 2023-01-27 19:43:16 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.3ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3706)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 4515)
+
+
+Started GET "/hotels?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union&commit=Filtrer" for ::1 at 2023-01-27 19:43:26 +0100
+Processing by HotelsController#index as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion", "commit"=>"Filtrer"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.3ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3100)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 3426)
+
+
+Started GET "/hotels/show?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union" for ::1 at 2023-01-27 19:43:29 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (3.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇷🇪La Réunion"]]
+  ↳ app/views/hotels/show.html.erb:3
+  Rendered hotels/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1445)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3455)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 3.6ms | Allocations: 3813)
+
+
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-27 19:43:39 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2815)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 3619)
+
+
+Started GET "/hotels/32/rooms/95" for ::1 at 2023-01-27 19:43:44 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"95"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2065)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 3305)
+
+
+Started GET "/hotels/32/rooms/95" for ::1 at 2023-01-28 11:11:32 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"95"}
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2056)
+Completed 200 OK in 87ms (Views: 14.2ms | ActiveRecord: 25.8ms | Allocations: 6244)
+
+
+Started GET "/hotels/32/rooms/95" for ::1 at 2023-01-28 11:12:54 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"95"}
+  [1m[36mHotel Load (0.9ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2583)
+Completed 200 OK in 39ms (Views: 27.8ms | ActiveRecord: 1.2ms | Allocations: 4381)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:13:00 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 754)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2788)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.6ms | Allocations: 3734)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:13:22 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 862)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3338)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.7ms | Allocations: 4677)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:13:23 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2601)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 3445)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:13:41 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.9ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 853)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 3299)
+Completed 200 OK in 46ms (Views: 38.1ms | ActiveRecord: 1.3ms | Allocations: 4638)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:13:44 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 2607)
+Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 0.7ms | Allocations: 3451)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:13:59 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 3307)
+Completed 200 OK in 40ms (Views: 32.1ms | ActiveRecord: 0.7ms | Allocations: 4646)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:14:01 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2606)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 3451)
+
+
+Started GET "/" for ::1 at 2023-01-28 11:15:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 479)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 34833)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 37857)
+
+
+Started GET "/hotels/index" for ::1 at 2023-01-28 11:15:21 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.7ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1593)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3852)
+Completed 200 OK in 21ms (Views: 10.4ms | ActiveRecord: 4.0ms | Allocations: 6276)
+
+
+Started GET "/hotels?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union&commit=Filtrer" for ::1 at 2023-01-28 11:15:23 +0100
+Processing by HotelsController#index as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion", "commit"=>"Filtrer"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.4ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3110)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 3447)
+
+
+Started GET "/hotels/show?country=%F0%9F%87%B7%F0%9F%87%AALa+R%C3%A9union" for ::1 at 2023-01-28 11:15:25 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇷🇪La Réunion"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (3.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇷🇪La Réunion"]]
+  ↳ app/views/hotels/show.html.erb:3
+  Rendered hotels/show.html.erb within layouts/application (Duration: 25.9ms | Allocations: 7459)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 9674)
+Completed 200 OK in 33ms (Views: 23.2ms | ActiveRecord: 9.0ms | Allocations: 10070)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:15:32 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 901)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3207)
+Completed 200 OK in 22ms (Views: 10.3ms | ActiveRecord: 2.4ms | Allocations: 7708)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:16:09 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 861)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3298)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 1.3ms | Allocations: 4709)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:16:11 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 582)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2622)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 0.9ms | Allocations: 3469)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:17:50 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (1.0ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 866)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3315)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 1.4ms | Allocations: 4656)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:17:51 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2601)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 3446)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:20:20 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 9163)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 9260)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.0ms | Allocations: 10597)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `room' for #<ActionView::Base:0x0000000000cff8>
+
+@output_buffer.append=( room.type_of_room );
+                        ^^^^
+Did you mean?  @rooms):
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id)  %>
+    6: <% end %>
+    7: <%= room.type_of_room %>
+  
+app/views/rooms/index.html.erb:7
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:20:58 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2647)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2732)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms | Allocations: 4153)
+
+
+  
+ActionView::Template::Error (undefined method `type_of_room' for nil:NilClass
+
+@output_buffer.append=( @room.type_of_room );
+                             ^^^^^^^^^^^^^):
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id)  %>
+    6: <% end %>
+    7: <%= @room.type_of_room %>
+  
+app/views/rooms/index.html.erb:7
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:22:02 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5558)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5643)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms | Allocations: 7007)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `room' for #<ActionView::Base:0x0000000000d610>
+
+@output_buffer.append=( room.capacity);
+                        ^^^^
+Did you mean?  @rooms):
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id)  %>
+    6: <% end %>
+    7: <%= room.capacity%>
+  
+app/views/rooms/index.html.erb:7
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:22:51 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 867)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3310)
+Completed 200 OK in 21ms (Views: 12.5ms | ActiveRecord: 0.9ms | Allocations: 4701)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:23:41 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3307)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.8ms | Allocations: 4702)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:23:42 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2640)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 3484)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:23:45 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2610)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 3398)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:24:50 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 870)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3310)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.9ms | Allocations: 4650)
+
+
+Started GET "/hotels/1/rooms" for ::1 at 2023-01-28 11:24:51 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"1"}
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 2607)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.6ms | Allocations: 3451)
+
+
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-28 11:24:56 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 3920)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5932)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 3.1ms | Allocations: 6721)
+
+
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-28 11:33:39 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2814)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2899)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 9.8ms | Allocations: 7210)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+ '.freeze;@output_buffer.append=( image_tag @room.image );@output_buffer.safe_append='
+                                                 ^^^^^^):
+    3: 
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id) %>
+    6:  <%= image_tag @room.image %>
+    7: <% end %>
+  
+app/views/rooms/index.html.erb:6
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-28 11:35:29 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.8ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 3032)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3117)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.3ms | Allocations: 4479)
+
+
+  
+ActionView::Template::Error (The asset "room.image" is not present in the asset pipeline.
+):
+    3: 
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id) %>
+    6:  <%= image_tag "room.image" %>
+    7: <% end %>
+  
+app/views/rooms/index.html.erb:6
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-28 11:36:06 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 4955)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 5040)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.2ms | Allocations: 6400)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<ActiveRecord::Relation [#<Room id: 94, type_of_room: "simple", capacity: 1, price: 77, hotel_id: 32, created_at: "2023-01-22 20:17:26.860180000 +0000", updated_at: "2023-01-22 20:17:26.860180000 +0000", image: "room4-hotel2-simple.jpg">, #<Room id: 95, type_of_room: "double", capacity: 2, price: 95, hotel_id: 32, created_at: "2023-01-22 20:17:26.861771000 +0000", updated_at: "2023-01-22 20:17:26.861771000 +0000", image: "room5-hotel2-double.jpg">, #<Room id: 96, type_of_room: "suite", capacity: 4, price: 250, hotel_id: 32, created_at: "2023-01-22 20:17:26.863353000 +0000", updated_at: "2023-01-22 20:17:26.863353000 +0000", image: "room6-hotel2-suite.jpg">]>):
+    3: 
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id) %>
+    6:  <%= image_tag @rooms.image %>
+    7: <% end %>
+  
+app/views/rooms/index.html.erb:6
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-28 11:36:34 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2810)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2895)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms | Allocations: 4253)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+ '.freeze;@output_buffer.append=( image_tag @room.image );@output_buffer.safe_append='
+                                                 ^^^^^^):
+    3: 
+    4: <% @rooms.each do |room| %>
+    5:   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id) %>
+    6:  <%= image_tag @room.image %>
+    7: <% end %>
+  
+app/views/rooms/index.html.erb:6
+app/views/rooms/index.html.erb:4
+Started GET "/hotels/32/rooms" for ::1 at 2023-01-28 11:38:25 +0100
+Processing by RoomsController#index as HTML
+  Parameters: {"hotel_id"=>"32"}
+  [1m[36mHotel Load (0.9ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."hotel_id" = $1[0m  [["hotel_id", 32]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered rooms/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3209)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 5322)
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 1.6ms | Allocations: 6712)
+
+
