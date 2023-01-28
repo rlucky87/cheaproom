@@ -4,5 +4,5 @@
 <% @rooms.each do |room| %>
   <%= link_to "Voir la chambre", hotel_room_path(hotel_id: @hotel.id, id: room.id) %>
   <%= image_tag room.image %>
+  <%= room.type_of_room %>
 <% end %>
-
