@@ -3221,3 +3221,17 @@ Processing by RoomsController#show as HTML
 Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 1.0ms | Allocations: 5063)
 
 
+Started GET "/hotels/32/rooms/94" for ::1 at 2023-01-28 11:45:02 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"32", "id"=>"94"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3233)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.6ms | Allocations: 5113)
+
+
