@@ -3805,3 +3805,42 @@ Processing by RoomsController#show as HTML
 Completed 200 OK in 53ms (Views: 44.9ms | ActiveRecord: 1.0ms | Allocations: 18920)
 
 
+Started GET "/hotels/38/rooms/114" for ::1 at 2023-01-29 15:23:40 +0100
+Processing by RoomsController#show as HTML
+  Parameters: {"hotel_id"=>"38", "id"=>"114"}
+  [1m[36mHotel Load (0.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:10:in `show'
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (Duration: 36.5ms | Allocations: 16411)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 18509)
+Completed 200 OK in 52ms (Views: 41.7ms | ActiveRecord: 1.0ms | Allocations: 20441)
+
+
+Started POST "/hotels/38/rooms/114/rooms/114/bookings" for ::1 at 2023-01-29 15:23:51 +0100
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"arrival_date(1i)"=>"2023", "arrival_date(2i)"=>"1", "arrival_date(3i)"=>"29", "departure_date(1i)"=>"2023", "departure_date(2i)"=>"1", "departure_date(3i)"=>"29"}, "commit"=>"Schedule your appointment", "hotel_id"=>"38", "room_id"=>"114"}
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 5986)
+
+
+  
+ActionView::MissingTemplate (Missing template room/show with {:locale=>[:en], :formats=>[:turbo_stream, :html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/rubenhernandezdominguez/code/rlucky87/cheaproom/app/views"
+  * "/Users/rubenhernandezdominguez/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views"
+  * "/Users/rubenhernandezdominguez/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/rubenhernandezdominguez/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  rooms/show
+               rails/conductor/action_mailbox/inbound_emails/show
+               hotels/show
+               rails/conductor/action_mailbox/inbound_emails/new
+               rails/conductor/action_mailbox/inbound_emails/sources/new
+               devise/mailer/password_change):
+  
+app/controllers/bookings_controller.rb:16:in `create'
