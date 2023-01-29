@@ -6,11 +6,16 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @room = Room.find(params[:room_id])
+    @booking.user = current_user
+    @booking.status = "pending"
+    @booking.room = @room
     if @booking.save
-      redirect_to @booking
+      redirect_to dashboard_path(@booking)
     else
-      render 'new'
+      render 'room/show', status: :unprocessable_entity
     end
+
   end
 
   def show
