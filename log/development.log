@@ -4764,3 +4764,21 @@ Processing by HotelsController#index as HTML
 Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 3755)
 
 
+Started GET "/" for ::1 at 2023-01-30 20:48:11 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 5540)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 5783)
+
+
+Started GET "/" for ::1 at 2023-01-30 20:49:26 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 6789)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 7032)
+
+
