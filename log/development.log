@@ -4704,3 +4704,63 @@ Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.9ms | Allocations: 
 LoadError (cannot load such file -- sassc):
   
 app/views/layouts/application.html.erb:9
+Started GET "/hotels/index" for ::1 at 2023-01-30 20:44:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.7ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 103.5ms | Allocations: 69403)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 7.4ms | Allocations: 74094)
+
+
+  
+ActionView::Template::Error (Asset `application.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.css
+
+and restart your server):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/hotels/index" for ::1 at 2023-01-30 20:46:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (1.2ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1857)
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 62384)
+Completed 200 OK in 86ms (Views: 76.8ms | ActiveRecord: 3.4ms | Allocations: 67110)
+
+
+Started GET "/" for ::1 at 2023-01-30 20:46:49 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 231)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2786)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3534)
+
+
+Started GET "/hotels/index" for ::1 at 2023-01-30 20:46:51 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.3ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1141)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3408)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 3755)
+
+
