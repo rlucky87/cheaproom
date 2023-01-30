@@ -7,13 +7,13 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @room = Room.find(params[:room_id])
-    @booking.user = current_user
-    @booking.status = "pending"
+    # @booking.user = current_user
+    # @booking.status = 'accepté'
     @booking.room = @room
     if @booking.save
       redirect_to dashboard_path(@booking)
     else
-      render 'room/show', status: :unprocessable_entity
+      render 'rooms/show', status: :unprocessable_entity
     end
 
   end

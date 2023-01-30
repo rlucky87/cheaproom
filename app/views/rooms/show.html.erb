@@ -10,7 +10,7 @@
     minDate: "today"
   });
 </script>
-<%= simple_form_for [@hotel, @room, @room, @booking], data: { controller: 'flatpickr' } do |f| %>
+<%= simple_form_for [@hotel, @room, @room, @booking],url: dashboard_path, data: { controller: 'flatpickr' } do |f| %>
   <%= f.input :arrival_date, as: :date, input_html: { data: { flatpickr_target: "startTime" } } %>
   <%= f.input :departure_date, as: :date, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_time' } %>
   <%= f.submit 'Schedule your appointment' %>

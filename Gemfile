@@ -30,6 +30,7 @@ gem 'flatpickr'
 gem "jbuilder"
 gem "devise"
 gem "simple_form"
+gem 'sass-rails', '~> 6.0'
 
 
 
