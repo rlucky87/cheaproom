@@ -4934,3 +4934,41 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 24ms (Views: 23.7ms | Allocations: 7207)
 
 
+Started GET "/hotels/index" for ::1 at 2023-01-30 21:20:38 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.7ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 42.4ms | Allocations: 4350)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 7139)
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 17.0ms | Allocations: 7810)
+
+
+Started GET "/" for ::1 at 2023-01-30 21:53:42 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 7736)
+Completed 200 OK in 43ms (Views: 41.3ms | Allocations: 8557)
+
+
+Started GET "/" for ::1 at 2023-01-30 21:55:28 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3227)
+Completed 200 OK in 11ms (Views: 9.1ms | Allocations: 4035)
+
+
+Started GET "/" for ::1 at 2023-01-30 21:56:47 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3221)
+Completed 200 OK in 17ms (Views: 11.5ms | Allocations: 4029)
+
+
