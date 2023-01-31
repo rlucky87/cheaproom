@@ -3,10 +3,26 @@
     <div class="logo">
       <%= image_tag "Gold Modern Luxury Building Logo Design .jpg"  %>
     </div>
-      <h1>Une GRANDE chambre à prix mini</h1>
+      <div class="content">
+  <div class="content__container">
+    <p class="content__container__text">
+      Comment
+    </p>
+
+    <ul class="content__container__list">
+
+      <li class="content__container__list__item"> reserver une grande chambre </li>
+      <li class="content__container__list__item">à prix mini </li>
+      <li class="content__container__list__item"> depuis chez toi</li>
+      <li class="content__container__list__item"> facilement</li>
+    </ul>
+  </div>
+</div>
 
 
 
-      <%= button_to "Voir hotels", hotels_index_path, method: :post, class: "buttonhomepage" %>
+
+
+      <%= button_to "Voir hotels", hotels_index_path, class: "buttonhomepage" %>
   </div>
 </div>
