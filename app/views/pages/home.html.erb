@@ -1,10 +1,12 @@
 <div class="container">
   <div class="background">
-    <h1>Un mini PRIX</h1>
-    <h1>Dans un GRAND hotel</h1>
+    <div class="logo">
+      <%= image_tag "Gold Modern Luxury Building Logo Design .jpg"  %>
+    </div>
+      <h1>Une GRANDE chambre à prix mini</h1>
 
 
 
-  <%= link_to "Voir hotels", hotels_index_path %>
+      <%= button_to "Voir hotels", hotels_index_path, method: :post, class: "buttonhomepage" %>
   </div>
 </div>

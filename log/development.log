@@ -4972,3 +4972,91 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 17ms (Views: 11.5ms | Allocations: 4029)
 
 
+Started GET "/hotels/index" for ::1 at 2023-01-30 22:06:45 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (1.0ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:4
+  Rendered hotels/index.html.erb within layouts/application (Duration: 46.4ms | Allocations: 4318)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 7110)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 9.6ms | Allocations: 7798)
+
+
+Started GET "/" for ::1 at 2023-01-31 16:16:39 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 146.9ms | Allocations: 54009)
+  Rendered layout layouts/application.html.erb (Duration: 151.2ms | Allocations: 56663)
+Completed 200 OK in 165ms (Views: 158.6ms | Allocations: 57485)
+
+
+Started GET "/" for ::1 at 2023-01-31 16:33:12 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1509)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 8656)
+Completed 200 OK in 71ms (Views: 63.4ms | Allocations: 9464)
+
+
+Started GET "/" for ::1 at 2023-01-31 16:33:52 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 46.5ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 65.8ms | Allocations: 7908)
+Completed 200 OK in 69ms (Views: 67.1ms | Allocations: 8161)
+
+
+Started GET "/" for ::1 at 2023-01-31 16:36:06 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1517)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 8692)
+Completed 200 OK in 36ms (Views: 34.5ms | Allocations: 9483)
+
+
+Started GET "/" for ::1 at 2023-01-31 16:37:01 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 7908)
+Completed 200 OK in 50ms (Views: 49.3ms | Allocations: 8161)
+
+
+Started GET "/" for ::1 at 2023-01-31 16:45:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 39.0ms | Allocations: 6364)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 6452)
+Completed 500 Internal Server Error in 46ms (Allocations: 7217)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotel_index_path' for #<ActionView::Base:0x0000000000e010>
+
+      '.freeze;@output_buffer.append=( button_to "Voir hotels", hotel_index_path, method: :post );@output_buffer.safe_append='
+                                                                ^^^^^^^^^^^^^^^^
+Did you mean?  hotels_index_path):
+     7: 
+     8: 
+     9: 
+    10:       <%= button_to "Voir hotels", hotel_index_path, method: :post %>
+    11:   </div>
+    12: </div>
+  
+app/views/pages/home.html.erb:10
+Started GET "/" for ::1 at 2023-01-31 16:46:18 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1897)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4323)
+Completed 200 OK in 18ms (Views: 16.1ms | Allocations: 5125)
+
+
