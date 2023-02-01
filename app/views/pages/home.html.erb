@@ -3,26 +3,33 @@
     <div class="logo">
       <%= image_tag "Gold Modern Luxury Building Logo Design .jpg"  %>
     </div>
-      <div class="content">
+      <%# <div class="content">
   <div class="content__container">
     <p class="content__container__text">
-      Comment
+      Reserve
     </p>
 
     <ul class="content__container__list">
 
-      <li class="content__container__list__item"> reserver une grande chambre </li>
+      <li class="content__container__list__item"> une grande chambre </li>
       <li class="content__container__list__item">à prix mini </li>
       <li class="content__container__list__item"> depuis chez toi</li>
       <li class="content__container__list__item"> facilement</li>
     </ul>
   </div>
+</div> %>
+<div>Reserve</div>
+<div>
+  <span>une GRANDE chambre</span>
 </div>
 
 
+<p>à prix <h5>mini</h5></p>
 
 
 
-      <%= button_to "Voir hotels", hotels_index_path, class: "buttonhomepage" %>
+
+        <%= link_to "Hotels", hotels_index_path, class: "buttonhomepage" %>
+
   </div>
 </div>
