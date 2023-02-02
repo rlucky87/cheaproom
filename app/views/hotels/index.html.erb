@@ -1,8 +1,12 @@
-<h1>1-Choissisez votre destination</h1>
-<%= form_tag hotels_path, method: :get, class: 'filtrepays' do %>
-  <%= select_tag :country, options_for_select(Hotel.pluck(:country).uniq) %>
- <h1>2-Cliquez sur filtrer pour y acceder à une selection d'hotels</h1>
-  <%= submit_tag "Filtrer", class: 'filtre' %>
-  <h1>3-Cliquez ci-dessous</h1>
-  <%= link_to "Voir tous les hôtels de ce pays", hotels_show_path(country: params[:country]) %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <h4>1-Choissisez votre destination</h4>
+      <%= form_tag hotels_path, method: :get, class: 'filtrepays' do %>
+      <%= select_tag :country, options_for_select(Hotel.pluck(:country).uniq) %>
+        <h4>2-Cliquez sur filtrer pour y acceder à une selection d'hotels</h4>
+          <%= submit_tag "Filtrer", class: 'filtre' %>
+            <h4>3-Cliquez ci-dessous</h4>
+              <%= button_to "Voir tous les hôtels de ce pays", hotels_show_path(country: params[:country]),class: 'buttonindexhotels' %>
+      <% end %>
+  </div>
+</div>

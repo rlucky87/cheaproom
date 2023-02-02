@@ -6294,3 +6294,36 @@ Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.6ms | Allocations: 533
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "La chambre c'etait bien mais la reception reste penible😞"], ["user_id", 16], ["room_id", 145], ["created_at", "2023-02-02 16:20:55.507131"], ["updated_at", "2023-02-02 16:20:55.507131"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:26:17 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (1.2ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 35.6ms | Allocations: 4843)
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 11559)
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 12.4ms | Allocations: 12436)
+
+
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:26:37 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.5ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1442)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 7659)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.5ms | Allocations: 7989)
+
+
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:27:13 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.8ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1948)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 4727)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.8ms | Allocations: 5570)
+
+
