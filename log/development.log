@@ -6327,3 +6327,47 @@ Processing by HotelsController#index as HTML
 Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.8ms | Allocations: 5570)
 
 
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:29:11 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.6ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1454)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 7853)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.6ms | Allocations: 8182)
+
+
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:32:57 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.6ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1454)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 7714)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.6ms | Allocations: 8005)
+
+
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:33:20 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.6ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1472)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 7721)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 0.6ms | Allocations: 8012)
+
+
+Started GET "/hotels/index" for ::1 at 2023-02-02 17:33:37 +0100
+Processing by HotelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/index.html.erb within layouts/application
+  [1m[36mHotel Pluck (0.4ms)[0m  [1m[34mSELECT "hotels"."country" FROM "hotels"[0m
+  ↳ app/views/hotels/index.html.erb:5
+  Rendered hotels/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1451)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3893)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 4184)
+
+
