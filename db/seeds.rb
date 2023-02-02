@@ -12,10 +12,10 @@ Review.destroy_all
 
 puts 'Creating users...'
 
-user1 = User.create!(email:"Ruben87@gmail.com", password:"123456")
-user2 = User.create!(email:"Ingrid@gmail.com", password:"123456")
-user3 = User.create!(email:"Ariana@gmail.com", password:"123456")
-user4 = User.create!(email:"Twix@gmail.fr", password:"123456")
+user1 = User.create!(email:"Ruben9@gmail.com", password:"123456")
+user2 = User.create!(email:"Ingrid9@gmail.com", password:"123456")
+user3 = User.create!(email:"Ariana9@gmail.com", password:"123456")
+user4 = User.create!(email:"Twix9@gmail.fr", password:"123456")
 
 puts 'Creating hotels...'
 
@@ -31,7 +31,7 @@ hotel9 = Hotel.create!(name: 'TBA TIME SQUARE', address: '340 W 40th St', city: 
 hotel10 = Hotel.create!(name: 'ALBAHIA', address: 'Carrer Sol Naixent 6', city: 'Alicante', country: '🇪🇸España', rating: 5, image:"hotel10.jpg")
 hotel11 = Hotel.create!(name: 'GILD HALL', address: '15 Gold St', city: 'New York', country: '🇺🇸United States', rating: 3, image:"hotel11.jpg")
 hotel12 = Hotel.create!(name: 'RIU PLAZA', address: '305 W 46th St', city: 'New York', country: '🇺🇸United States', rating: 5, image:"hotel12.jpeg")
-hotel13 = Hotel.create!(name: 'SAN LORENZO', address: 'Via dei Reti 25', city: 'Rome', country: '🇮🇹Itale', rating: 4, image:"hotel13.jpg")
+hotel13 = Hotel.create!(name: 'SAN LORENZO', address: 'Via dei Reti 25', city: 'Rome', country: '🇮🇹Italie', rating: 4, image:"hotel13.jpg")
 hotel14 = Hotel.create!(name: 'LA BELLA ROMA', address: 'Via Rigoberto', city: 'Rome', country: '🇮🇹Italie', rating: 5, image:"hotel14.jpg")
 hotel15 = Hotel.create!(name: 'DOLCE VITA', address: 'Via di pastore', city: 'Rome', country: '🇮🇹Italie', rating: 5, image:"hotel15.jpg")
 
