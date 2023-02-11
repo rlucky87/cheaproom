@@ -1,8 +1,10 @@
 <h1>Hotels#show</h1>
-<p>Find me in app/views/hotels/show.html.erb</p>
-<% @hotels.each do |hotel| %>
+
+  <%= image_tag (@hotel.image) %>
   <%= hotel.name %>
   <%= hotel.address %>
+  <%= hotel.city %>
+  <%= hotel.country %>
   <%= hotel.rating %>
+
   <%= link_to "Voir les chambres disponibles", hotel_rooms_path(hotel_id: hotel.id) %>
-<% end %>

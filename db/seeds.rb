@@ -6,16 +6,17 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Cleaning database...'
-User.destroy_all
+
+
 Booking.destroy_all
 Review.destroy_all
 
 puts 'Creating users...'
 
-user1 = User.create!(email:"Ruben9@gmail.com", password:"123456")
-user2 = User.create!(email:"Ingrid9@gmail.com", password:"123456")
-user3 = User.create!(email:"Ariana9@gmail.com", password:"123456")
-user4 = User.create!(email:"Twix9@gmail.fr", password:"123456")
+user1 = User.create!(email: 'Ruben@gmail.com', password: '123456')
+user2 = User.create!(email: 'Ingrid@gmail.com', password: '123456')
+user3 = User.create!(email: 'Ariana@gmail.com', password: '123456')
+user4 = User.create!(email: 'Twix@gmail.fr', password: '123456')
 
 puts 'Creating hotels...'
 
@@ -88,21 +89,21 @@ room45 = Room.create!(type_of_room: 'suite', capacity: '4', price: '296€', hot
 puts 'Creating bookings...'
 
 booking1 = Booking.create!(room: room24,
-  user: user1,
+  user: user4,
   arrival_date: "2022-11-22",
   departure_date: "2022-11-24",
   total_price: "300€",
   status: "accepted" )
 
 booking2 = Booking.create!(room: room2,
-  user: user2,
+  user: user4,
   arrival_date: "2022-11-23",
   departure_date: "2022-11-24",
   total_price: "90€",
   status: "accepted" )
 
 booking3 = Booking.create!(room: room10,
-  user: user2,
+  user: user3,
   arrival_date: "2022-11-25",
   departure_date: "2022-11-26",
   total_price: "58€",
