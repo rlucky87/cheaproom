@@ -8,4 +8,9 @@ class HotelsController < ApplicationController
   def show
       @hotels = Hotel.where(country: params[:country])
     end
+
+    def image
+      @hotel.image
+    end
+
 end

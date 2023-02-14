@@ -8962,3 +8962,988 @@ ActionView::Template::Error (undefined method `image' for nil:NilClass
     6:   <%= hotel.city %>
   
 app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:53:09 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2351)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 2439)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 3302)
+
+
+  
+ActionView::Template::Error (The asset "hotel.image" is not present in the asset pipeline.
+):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag('hotel.image') %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:53:25 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 5176)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5264)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 6125)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotel' for #<ActionView::Base:0x00000000014938>
+
+  '.freeze;@output_buffer.append=( image_tag(hotel.image) );@output_buffer.safe_append='
+                                             ^^^^^
+Did you mean?  @hotels):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag(hotel.image) %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:53:36 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1961)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2049)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2910)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag(@hotel.image) );@output_buffer.safe_append='
+                                                   ^^^^^^):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag(@hotel.image) %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:55:39 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 22.6ms | Allocations: 1961)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 2049)
+Completed 500 Internal Server Error in 29ms (Allocations: 2902)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag @hotel.image );@output_buffer.safe_append='
+                                                   ^^^^^^):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag @hotel.image %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:58:34 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1714)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1802)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 5.2ms | Allocations: 6421)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag @hotel.image );@output_buffer.safe_append='
+                                                   ^^^^^^):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag @hotel.image %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:58:36 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1801)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2111)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag @hotel.image );@output_buffer.safe_append='
+                                                   ^^^^^^):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag @hotel.image %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 11:58:39 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1801)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2065)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag @hotel.image );@output_buffer.safe_append='
+                                                   ^^^^^^):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:   <%= image_tag @hotel.image %>
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+  
+app/views/hotels/show.html.erb:3
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 12:02:44 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 5108)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5196)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.7ms | Allocations: 7552)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotel' for #<ActionView::Base:0x0000000001fe78>
+
+  '.freeze;@output_buffer.append=( hotel.name );@output_buffer.safe_append='
+                                   ^^^^^
+Did you mean?  @hotels):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:  
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+    7:   <%= hotel.country %>
+  
+app/views/hotels/show.html.erb:4
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 12:02:45 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4904)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4983)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 5293)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hotel' for #<ActionView::Base:0x00000000020170>
+
+  '.freeze;@output_buffer.append=( hotel.name );@output_buffer.safe_append='
+                                   ^^^^^
+Did you mean?  @hotels):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3:  
+    4:   <%= hotel.name %>
+    5:   <%= hotel.address %>
+    6:   <%= hotel.city %>
+    7:   <%= hotel.country %>
+  
+app/views/hotels/show.html.erb:4
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 12:03:06 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  Rendered hotels/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1929)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2017)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2831)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( @hotel.name );@output_buffer.safe_append='
+                                         ^^^^^):
+    1: <h1>Hotels#show</h1>
+    2: 
+    3: 
+    4:   <%= @hotel.name %>
+    5:   <%= @hotel.address %>
+    6:   <%= @hotel.city %>
+    7:   <%= @hotel.country %>
+  
+app/views/hotels/show.html.erb:4
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-11 12:03:42 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (0.9ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇫🇷France"]]
+  ↳ app/views/hotels/show.html.erb:2
+  Rendered hotels/show.html.erb within layouts/application (Duration: 28.6ms | Allocations: 9126)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 16358)
+Completed 200 OK in 64ms (Views: 49.9ms | ActiveRecord: 6.4ms | Allocations: 17250)
+
+
+Started GET "/hotels/show" for ::1 at 2023-02-11 12:03:42 +0100
+Processing by HotelsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" IS NULL[0m
+  ↳ app/views/hotels/show.html.erb:2
+  Rendered hotels/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 873)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3754)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 4125)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mHotel Load (1.2ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (6.7ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.7ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 28]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 29]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 30]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 31]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 32]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 33]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 34]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 35]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 36]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 37]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 38]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 39]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 40]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 41]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 42]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 43]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 44]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 45]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (2.5ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 46]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (6.7ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 181]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (1.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 182]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (1.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (3.0ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 182]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (0.5ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (1.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (1.2ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 182]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 183]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 184]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 185]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (1.0ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 186]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 187]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 188]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 189]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 190]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 191]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 192]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 193]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 194]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 195]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.7ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 196]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 197]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 198]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 199]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 200]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 201]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 202]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 203]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 204]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 205]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 206]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 207]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 208]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 209]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 210]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 211]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 212]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 213]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 214]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 215]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 216]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 217]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 218]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 219]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 220]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 221]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 222]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 223]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 224]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 225]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 137]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 138]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 139]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 140]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 141]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 142]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 143]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 144]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 145]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 146]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 147]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 148]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 149]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 150]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 151]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 152]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 153]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 154]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 155]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 156]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 157]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 158]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 159]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 160]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 161]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 162]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 163]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 164]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 165]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 166]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 167]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 168]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 169]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 170]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 171]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 172]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 173]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 174]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 175]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 176]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 177]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 178]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 179]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 180]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHotel Load (1.0ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.7ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 46]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 47]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 48]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 49]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 50]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 51]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 52]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 53]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 54]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 55]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 56]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 57]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 58]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 59]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 60]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 61]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 62]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 63]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 64]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 65]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 66]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 67]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 68]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 69]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 70]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 71]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 72]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 73]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 74]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "hotels" WHERE "hotels"."id" = $1[0m  [["id", 75]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruben@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruben9@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBooking Load (1.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mHotel Load (1.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruben98@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruben98@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-02-14 17:31:14.701858"], ["updated_at", "2023-02-14 17:31:14.701858"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ingrid98@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ingrid98@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-02-14 17:31:15.103133"], ["updated_at", "2023-02-14 17:31:15.103133"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ariana98@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ariana98@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-02-14 17:31:15.501104"], ["updated_at", "2023-02-14 17:31:15.501104"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "twix98@gmail.fr"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "twix98@gmail.fr"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-02-14 17:31:15.899630"], ["updated_at", "2023-02-14 17:31:15.899630"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (1.7ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "14 Rue du Stade"], ["name", "CREOLIA"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 4], ["created_at", "2023-02-14 17:31:15.911066"], ["updated_at", "2023-02-14 17:31:15.911066"], ["image", "hotel1.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "91 bis allée des Topazes"], ["name", "BELLEPIERRE"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 3], ["created_at", "2023-02-14 17:31:15.914971"], ["updated_at", "2023-02-14 17:31:15.914971"], ["image", "hotel2.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "1 Rue Issop Ravate"], ["name", "DINA MORGABINE"], ["country", "🇷🇪La Réunion"], ["city", "Saint-Denis"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.917105"], ["updated_at", "2023-02-14 17:31:15.917105"], ["image", "hotel3.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "17 Rue Robert Blache"], ["name", "LE ROBINET D'OR"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.919257"], ["updated_at", "2023-02-14 17:31:15.919257"], ["image", "hotel4.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "12 Rue Saint-Roch"], ["name", "LOUVRE MONTANA"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 3], ["created_at", "2023-02-14 17:31:15.921466"], ["updated_at", "2023-02-14 17:31:15.921466"], ["image", "hotel5.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "133 Avenue de Villiers"], ["name", "KORNER ETOILE"], ["country", "🇫🇷France"], ["city", "Paris"], ["rating", 4], ["created_at", "2023-02-14 17:31:15.923653"], ["updated_at", "2023-02-14 17:31:15.923653"], ["image", "hotel6.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "Rambla Méndez Núñez"], ["name", "MELIA"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.925792"], ["updated_at", "2023-02-14 17:31:15.925792"], ["image", "hotel7.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "Avenida de Niza 38"], ["name", "ALMIRANTE"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.927892"], ["updated_at", "2023-02-14 17:31:15.927892"], ["image", "hotel8.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "340 W 40th St"], ["name", "TBA TIME SQUARE"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 4], ["created_at", "2023-02-14 17:31:15.929904"], ["updated_at", "2023-02-14 17:31:15.929904"], ["image", "hotel9.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "Carrer Sol Naixent 6"], ["name", "ALBAHIA"], ["country", "🇪🇸España"], ["city", "Alicante"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.932000"], ["updated_at", "2023-02-14 17:31:15.932000"], ["image", "hotel10.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "15 Gold St"], ["name", "GILD HALL"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 3], ["created_at", "2023-02-14 17:31:15.933956"], ["updated_at", "2023-02-14 17:31:15.933956"], ["image", "hotel11.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "305 W 46th St"], ["name", "RIU PLAZA"], ["country", "🇺🇸United States"], ["city", "New York"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.935987"], ["updated_at", "2023-02-14 17:31:15.935987"], ["image", "hotel12.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.2ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "Via dei Reti 25"], ["name", "SAN LORENZO"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 4], ["created_at", "2023-02-14 17:31:15.937919"], ["updated_at", "2023-02-14 17:31:15.937919"], ["image", "hotel13.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "Via Rigoberto"], ["name", "LA BELLA ROMA"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.940089"], ["updated_at", "2023-02-14 17:31:15.940089"], ["image", "hotel14.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHotel Create (0.3ms)[0m  [1m[32mINSERT INTO "hotels" ("address", "name", "country", "city", "rating", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "Via di pastore"], ["name", "DOLCE VITA"], ["country", "🇮🇹Italie"], ["city", "Rome"], ["rating", 5], ["created_at", "2023-02-14 17:31:15.942211"], ["updated_at", "2023-02-14 17:31:15.942211"], ["image", "hotel15.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (1.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 80], ["hotel_id", 76], ["created_at", "2023-02-14 17:31:15.950936"], ["updated_at", "2023-02-14 17:31:15.950936"], ["image", "room1-hotel1-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 90], ["hotel_id", 76], ["created_at", "2023-02-14 17:31:15.954236"], ["updated_at", "2023-02-14 17:31:15.954236"], ["image", "room2-hotel1-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 200], ["hotel_id", 76], ["created_at", "2023-02-14 17:31:15.956357"], ["updated_at", "2023-02-14 17:31:15.956357"], ["image", "room3-hotel1-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 77], ["hotel_id", 77], ["created_at", "2023-02-14 17:31:15.958384"], ["updated_at", "2023-02-14 17:31:15.958384"], ["image", "room4-hotel2-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 95], ["hotel_id", 77], ["created_at", "2023-02-14 17:31:15.960428"], ["updated_at", "2023-02-14 17:31:15.960428"], ["image", "room5-hotel2-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 250], ["hotel_id", 77], ["created_at", "2023-02-14 17:31:15.962528"], ["updated_at", "2023-02-14 17:31:15.962528"], ["image", "room6-hotel2-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 88], ["hotel_id", 78], ["created_at", "2023-02-14 17:31:15.964655"], ["updated_at", "2023-02-14 17:31:15.964655"], ["image", "room7-hotel3-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 99], ["hotel_id", 78], ["created_at", "2023-02-14 17:31:15.966739"], ["updated_at", "2023-02-14 17:31:15.966739"], ["image", "room8-hotel3-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 350], ["hotel_id", 78], ["created_at", "2023-02-14 17:31:15.968808"], ["updated_at", "2023-02-14 17:31:15.968808"], ["image", "room9-hotel3-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 58], ["hotel_id", 79], ["created_at", "2023-02-14 17:31:15.970883"], ["updated_at", "2023-02-14 17:31:15.970883"], ["image", "room10-hotel4-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 69], ["hotel_id", 79], ["created_at", "2023-02-14 17:31:15.972885"], ["updated_at", "2023-02-14 17:31:15.972885"], ["image", "room11-hotel4-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 150], ["hotel_id", 79], ["created_at", "2023-02-14 17:31:15.974878"], ["updated_at", "2023-02-14 17:31:15.974878"], ["image", "room12-hotel4-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 98], ["hotel_id", 80], ["created_at", "2023-02-14 17:31:15.976920"], ["updated_at", "2023-02-14 17:31:15.976920"], ["image", "room13-hotel5-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 119], ["hotel_id", 80], ["created_at", "2023-02-14 17:31:15.978863"], ["updated_at", "2023-02-14 17:31:15.978863"], ["image", "room14-hotel5-double.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 220], ["hotel_id", 80], ["created_at", "2023-02-14 17:31:15.980693"], ["updated_at", "2023-02-14 17:31:15.980693"], ["image", "room15-hotel5-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 75], ["hotel_id", 81], ["created_at", "2023-02-14 17:31:15.982698"], ["updated_at", "2023-02-14 17:31:15.982698"], ["image", "room16-hotel6-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 91], ["hotel_id", 81], ["created_at", "2023-02-14 17:31:15.984753"], ["updated_at", "2023-02-14 17:31:15.984753"], ["image", "room17-hotel6-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 210], ["hotel_id", 81], ["created_at", "2023-02-14 17:31:15.986818"], ["updated_at", "2023-02-14 17:31:15.986818"], ["image", "room18-hotel6-suite.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 76], ["hotel_id", 82], ["created_at", "2023-02-14 17:31:15.988691"], ["updated_at", "2023-02-14 17:31:15.988691"], ["image", "room19-hotel7-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 85], ["hotel_id", 82], ["created_at", "2023-02-14 17:31:15.990679"], ["updated_at", "2023-02-14 17:31:15.990679"], ["image", "room20-hotel7-double.jpeg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 550], ["hotel_id", 82], ["created_at", "2023-02-14 17:31:15.992747"], ["updated_at", "2023-02-14 17:31:15.992747"], ["image", "room21-hotel7-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.5ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 58], ["hotel_id", 83], ["created_at", "2023-02-14 17:31:15.994778"], ["updated_at", "2023-02-14 17:31:15.994778"], ["image", "room22-hotel8-simple.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 69], ["hotel_id", 83], ["created_at", "2023-02-14 17:31:15.997347"], ["updated_at", "2023-02-14 17:31:15.997347"], ["image", "room23-hotel8-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 150], ["hotel_id", 83], ["created_at", "2023-02-14 17:31:15.999413"], ["updated_at", "2023-02-14 17:31:15.999413"], ["image", "room24-hotel8-suite.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.4ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 98], ["hotel_id", 84], ["created_at", "2023-02-14 17:31:16.001447"], ["updated_at", "2023-02-14 17:31:16.001447"], ["image", "room25-hotel9-simple.jpg"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 169], ["hotel_id", 84], ["created_at", "2023-02-14 17:31:16.003672"], ["updated_at", "2023-02-14 17:31:16.003672"], ["image", "room26-hotel9-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 250], ["hotel_id", 84], ["created_at", "2023-02-14 17:31:16.005652"], ["updated_at", "2023-02-14 17:31:16.005652"], ["image", "room27-hotel9-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 68], ["hotel_id", 85], ["created_at", "2023-02-14 17:31:16.007531"], ["updated_at", "2023-02-14 17:31:16.007531"], ["image", "room28-hotel10-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 169], ["hotel_id", 85], ["created_at", "2023-02-14 17:31:16.009434"], ["updated_at", "2023-02-14 17:31:16.009434"], ["image", "room29-hotel10-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 290], ["hotel_id", 85], ["created_at", "2023-02-14 17:31:16.011321"], ["updated_at", "2023-02-14 17:31:16.011321"], ["image", "room30-hotel10-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 72], ["hotel_id", 86], ["created_at", "2023-02-14 17:31:16.013231"], ["updated_at", "2023-02-14 17:31:16.013231"], ["image", "room31-hotel11-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 92], ["hotel_id", 86], ["created_at", "2023-02-14 17:31:16.015108"], ["updated_at", "2023-02-14 17:31:16.015108"], ["image", "room32-hotel11-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 212], ["hotel_id", 86], ["created_at", "2023-02-14 17:31:16.017055"], ["updated_at", "2023-02-14 17:31:16.017055"], ["image", "room33-hotel11-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 73], ["hotel_id", 87], ["created_at", "2023-02-14 17:31:16.018910"], ["updated_at", "2023-02-14 17:31:16.018910"], ["image", "room34-hotel12-simple.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 83], ["hotel_id", 87], ["created_at", "2023-02-14 17:31:16.020754"], ["updated_at", "2023-02-14 17:31:16.020754"], ["image", "room35-hotel12-double.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 350], ["hotel_id", 87], ["created_at", "2023-02-14 17:31:16.022556"], ["updated_at", "2023-02-14 17:31:16.022556"], ["image", "room36-hotel12-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 54], ["hotel_id", 88], ["created_at", "2023-02-14 17:31:16.024474"], ["updated_at", "2023-02-14 17:31:16.024474"], ["image", "room37-hotel13-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 64], ["hotel_id", 88], ["created_at", "2023-02-14 17:31:16.026465"], ["updated_at", "2023-02-14 17:31:16.026465"], ["image", "room38-hotel13-double.jpeg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 154], ["hotel_id", 88], ["created_at", "2023-02-14 17:31:16.028372"], ["updated_at", "2023-02-14 17:31:16.028372"], ["image", "room39-hotel13-suite.jpg"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 95], ["hotel_id", 89], ["created_at", "2023-02-14 17:31:16.033135"], ["updated_at", "2023-02-14 17:31:16.033135"], ["image", "room40-hotel14-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 165], ["hotel_id", 89], ["created_at", "2023-02-14 17:31:16.035412"], ["updated_at", "2023-02-14 17:31:16.035412"], ["image", "room41-hotel14-double.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 255], ["hotel_id", 89], ["created_at", "2023-02-14 17:31:16.037545"], ["updated_at", "2023-02-14 17:31:16.037545"], ["image", "room42-hotel14-suite.jpeg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "simple"], ["capacity", 1], ["price", 66], ["hotel_id", 90], ["created_at", "2023-02-14 17:31:16.039757"], ["updated_at", "2023-02-14 17:31:16.039757"], ["image", "room43-hotel15-simple.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "double"], ["capacity", 2], ["price", 166], ["hotel_id", 90], ["created_at", "2023-02-14 17:31:16.041880"], ["updated_at", "2023-02-14 17:31:16.041880"], ["image", "room44-hotel15-double.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("type_of_room", "capacity", "price", "hotel_id", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["type_of_room", "suite"], ["capacity", 4], ["price", 296], ["hotel_id", 90], ["created_at", "2023-02-14 17:31:16.044254"], ["updated_at", "2023-02-14 17:31:16.044254"], ["image", "room45-hotel15-suite.jpg"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Create (6.3ms)[0m  [1m[32mINSERT INTO "bookings" ("arrival_date", "departure_date", "total_price", "room_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["arrival_date", "2022-11-22"], ["departure_date", "2022-11-24"], ["total_price", 300], ["room_id", 249], ["user_id", 26], ["created_at", "2023-02-14 17:31:16.054447"], ["updated_at", "2023-02-14 17:31:16.054447"], ["status", "accepted"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Create (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("arrival_date", "departure_date", "total_price", "room_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["arrival_date", "2022-11-23"], ["departure_date", "2022-11-24"], ["total_price", 90], ["room_id", 227], ["user_id", 26], ["created_at", "2023-02-14 17:31:16.064057"], ["updated_at", "2023-02-14 17:31:16.064057"], ["status", "accepted"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBooking Create (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("arrival_date", "departure_date", "total_price", "room_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["arrival_date", "2022-11-25"], ["departure_date", "2022-11-26"], ["total_price", 58], ["room_id", 235], ["user_id", 25], ["created_at", "2023-02-14 17:31:16.066406"], ["updated_at", "2023-02-14 17:31:16.066406"], ["status", "accepted"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Superbe chambre! l'hotel au top!🤩"], ["user_id", 23], ["room_id", 249], ["created_at", "2023-02-14 17:31:16.075124"], ["updated_at", "2023-02-14 17:31:16.075124"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Bof, je ne reviendrais pas sur cet hotel. La chambre etait salle!🤮"], ["user_id", 24], ["room_id", 227], ["created_at", "2023-02-14 17:31:16.077783"], ["updated_at", "2023-02-14 17:31:16.077783"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("text", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "La chambre c'etait bien mais la reception reste penible😞"], ["user_id", 24], ["room_id", 235], ["created_at", "2023-02-14 17:31:16.079934"], ["updated_at", "2023-02-14 17:31:16.079934"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/hotels/show?country=%F0%9F%87%AB%F0%9F%87%B7France" for ::1 at 2023-02-14 18:31:29 +0100
+Processing by HotelsController#show as HTML
+  Parameters: {"country"=>"🇫🇷France"}
+  Rendering layout layouts/application.html.erb
+  Rendering hotels/show.html.erb within layouts/application
+  [1m[36mHotel Load (0.7ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."country" = $1[0m  [["country", "🇫🇷France"]]
+  ↳ app/views/hotels/show.html.erb:2
+  Rendered hotels/show.html.erb within layouts/application (Duration: 447.6ms | Allocations: 6304)
+  Rendered layout layouts/application.html.erb (Duration: 857.6ms | Allocations: 9057)
+Completed 200 OK in 1099ms (Views: 978.5ms | ActiveRecord: 39.7ms | Allocations: 9896)
+
+

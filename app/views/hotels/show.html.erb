@@ -1,6 +1,6 @@
 <h1>Hotels#show</h1>
-
-  <%= image_tag (@hotel.image) %>
+<% @hotels.each do |hotel| %>
+  <%= image_tag url_for(hotel.image) %>
   <%= hotel.name %>
   <%= hotel.address %>
   <%= hotel.city %>
@@ -8,3 +8,4 @@
   <%= hotel.rating %>
 
   <%= link_to "Voir les chambres disponibles", hotel_rooms_path(hotel_id: hotel.id) %>
+<% end %>
