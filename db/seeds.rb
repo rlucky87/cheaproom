@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Cleaning database...'
-
+User.destroy_all
 Booking.destroy_all
 Review.destroy_all
 Room.destroy_all
@@ -24,7 +24,7 @@ puts 'Creating hotels...'
 hotel1 = Hotel.create!(name: 'CREOLIA', address: '14 Rue du Stade', city: 'Saint-Denis', country: '🇷🇪La Réunion', rating: 4, image:"hotel1.jpg")
 hotel2 = Hotel.create!(name: 'BELLEPIERRE', address: '91 bis allée des Topazes', city: 'Saint-Denis', country: '🇷🇪La Réunion', rating: 3, image:"hotel2.jpg")
 hotel3 = Hotel.create!(name: 'DINA MORGABINE', address: '1 Rue Issop Ravate', city: 'Saint-Denis', country: '🇷🇪La Réunion', rating: 5, image:"hotel3.jpeg")
-hotel4 = Hotel.create!(name: "LE ROBINET D'OR", address: '17 Rue Robert Blache', city: 'Paris', country: '🇫🇷France', rating: 5, image:"hotel4.jpeg")
+hotel4 = Hotel.create!(name: "LE ROBINET D'OR", address: '17 Rue Robert Blache', city: 'Paris', country: '🇫🇷France', rating: 5 , image:"hotel4.jpeg")
 hotel5 = Hotel.create!(name: 'LOUVRE MONTANA', address: '12 Rue Saint-Roch', city: 'Paris', country: '🇫🇷France', rating: 3, image:"hotel5.jpg")
 hotel6 = Hotel.create!(name: 'KORNER ETOILE', address: '133 Avenue de Villiers', city: 'Paris', country: '🇫🇷France', rating: 4,image:"hotel6.jpg")
 hotel7 = Hotel.create!(name: 'MELIA', address: 'Rambla Méndez Núñez', city: 'Alicante', country: '🇪🇸España', rating: 5, image:"hotel7.jpeg")
